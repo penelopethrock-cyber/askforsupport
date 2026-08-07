@@ -1,46 +1,28 @@
-# AskFor.Support — Resource Directory
+# Ask For Support
 
-A free, open, community-maintained directory of helpful resources and services, organized by category. The goal is to make it easy for anyone to find vetted organizations, support lines, programs, and tools that can help — no matter what they're going through.
+This is a Jekyll-based site for [Ask For Support](https://askfor.support), a categorized resource directory for LGBTQIA2S+, healthcare, education, and technology resources.
 
-🌐 **Live site:** [askfor.support](https://askfor.support)
+## Structure
 
-## Categories
+The site is built using GitHub Pages' native Jekyll support.
 
-| Category | Description |
-|---|---|
-| [LGBTQIA2S+](lgbtqia2s.html) | Support orgs, crisis lines, community groups, legal aid, affirming providers |
-| [Healthcare](healthcare.html) | Mental health, physical health, clinics, insurance navigation, telehealth |
-| [Education](education.html) | Scholarships, tutoring, GED programs, continuing ed, learning tools |
-| [Technology](technology.html) | Digital literacy, low-cost internet, device programs, coding resources |
+## How to add new resources
 
-## Site Structure
+To add, update, or remove a resource, simply edit the `_data/resources.yml` file. You do not need to write any HTML.
 
+The file is structured by category (`lgbtqia2s`, `healthcare`, `education`, `technology`). For each resource, you can provide:
+- `name`: Name of the organization or resource
+- `description`: A short description of the services offered
+- `phone`: Contact phone number (optional)
+- `address`: Physical location or address (optional)
+- `link`: Website URL (optional)
+
+Example:
+```yaml
+healthcare:
+  - name: Sample Health Clinic
+    description: Provides accessible healthcare services.
+    phone: "555-0199"
+    address: "123 Health Ave, Cityville"
+    link: "https://example.org"
 ```
-askforsupport/
-├── index.html          # Homepage with category cards
-├── lgbtqia2s.html      # LGBTQIA2S+ resources page
-├── healthcare.html     # Healthcare resources page
-├── education.html      # Education resources page
-├── technology.html     # Technology resources page
-├── style.css           # Shared stylesheet (mobile-responsive)
-├── CNAME               # Custom domain config for GitHub Pages
-└── README.md           # This file
-```
-
-## Contributing
-
-Want to add or update a resource? [Open an issue](https://github.com/penelopethrock-cyber/askforsupport/issues) or submit a pull request.
-
-Each resource entry follows this format in the HTML:
-
-```html
-<div class="resource-item">
-  <h3>Organization Name</h3>
-  <p>Brief description of what this organization offers and who it serves.</p>
-  <a class="resource-link" href="https://example.org" target="_blank" rel="noopener">Visit website →</a>
-</div>
-```
-
-## License
-
-Content is shared freely. See individual resources for their own terms.

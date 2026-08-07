@@ -1,0 +1,42 @@
+lgbtqia2s:
+  - name: LGBTQIA2S+ Community Center
+    description: A safe space offering support groups, counseling, and community events.
+    phone: "555-0101"
+    address: "101 Pride Blvd, Metropolis"
+    link: "https://example.com/lgbtq-center"
+  - name: Trans Youth Hotline
+    description: 24/7 crisis intervention and suicide prevention for trans youth.
+    phone: "555-0102"
+    link: "https://example.com/trans-youth"
+
+healthcare:
+  - name: General Wellness Clinic
+    description: Affordable primary care, vaccinations, and preventive health screenings.
+    phone: "555-0201"
+    address: "202 Health Way, Metropolis"
+    link: "https://example.com/wellness-clinic"
+  - name: Mental Health Advocates
+    description: Providing accessible therapy and psychiatric support.
+    phone: "555-0202"
+    link: "https://example.com/mental-health"
+
+education:
+  - name: Adult Literacy Network
+    description: Free classes for adults looking to improve reading and writing skills.
+    phone: "555-0301"
+    address: "303 Knowledge St, Metropolis"
+    link: "https://example.com/literacy"
+  - name: Tech Bootcamps for All
+    description: Scholarships and training programs for underrepresented groups in tech.
+    link: "https://example.com/tech-bootcamps"
+
+technology:
+  - name: Devices for the People
+    description: Refurbished laptops and internet hotspots for low-income households.
+    phone: "555-0401"
+    address: "404 Circuit Dr, Metropolis"
+    link: "https://example.com/devices"
+  - name: Digital Rights Defense
+    description: Legal assistance and advocacy for digital privacy and internet access.
+    phone: "555-0402"
+    link: "https://example.com/digital-rights"

@@ -1,0 +1,18 @@
+---
+layout: default
+title: Education Resources
+---
+<h2>Education Resources</h2>
+<p>Learning, training, and literacy programs.</p>
+
+<div class="resource-list">
+  {% for resource in site.data.resources.education %}
+  <div class="resource-card">
+    <h3>{{ resource.name }}</h3>
+    <p class="desc">{{ resource.description }}</p>
+    {% if resource.phone %}<p><strong>Phone:</strong> {{ resource.phone }}</p>{% endif %}
+    {% if resource.address %}<p><strong>Address:</strong> {{ resource.address }}</p>{% endif %}
+    {% if resource.link %}<p><a href="{{ resource.link }}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>{% endif %}
+  </div>
+  {% endfor %}
+</div>
