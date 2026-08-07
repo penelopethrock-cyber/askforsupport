@@ -3,54 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Technology Resources — AskFor.Support</title>
-  <meta name="description" content="Technology resources including digital literacy, low-cost internet, device programs, and coding tools." />
+  <title>Technology Resources — Ask For Support</title>
+  <meta name="description" content="Free internet access, low-cost devices, digital literacy programs, and broadband assistance programs." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <span class="nav-brand"><a href="index.html" style="color:inherit;text-decoration:none;"><span>AskFor</span>.Support</a></span>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="lgbtqia2s.html">LGBTQIA2S+</a></li>
-      <li><a href="healthcare.html">Healthcare</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="technology.html" class="active">Technology</a></li>
-    </ul>
-  </div>
-</nav>
-
-<main>
-  <header class="page-header">
-    <span class="category-label label-technology">Technology</span>
-    <h1>💻 Technology Resources</h1>
-    <p>Digital literacy programs, low-cost internet access, device assistance, coding resources, and tech support for individuals and families.</p>
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">Ask For Support</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lgbtqia2s.html">LGBTQIA2S+</a></li>
+          <li><a href="healthcare.html">Healthcare</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="technology.html" class="active">Technology</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <p class="resource-intro">Resources will be listed here. Each entry includes a name, description, and contact or website link.</p>
-
-  <div class="resource-list">
-    <!-- RESOURCE ENTRIES WILL GO HERE.
-         Example structure:
-    <div class="resource-item">
-      <h3>Organization Name</h3>
-      <p>Brief description of what this organization offers and who it serves.</p>
-      <a class="resource-link" href="https://example.org" target="_blank" rel="noopener">Visit website →</a>
+  <!-- ====== PAGE HEADER ====== -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-icon">💻</div>
+      <h1>Technology Resources</h1>
+      <p>Free internet access, low-cost devices, digital literacy programs, and assistance getting and staying connected.</p>
     </div>
-    -->
-  </div>
+  </section>
 
-  <div class="empty-state">
-    <div class="empty-icon">💻</div>
-    <p><strong>No resources listed yet.</strong><br />Know a great organization or service? <a href="https://github.com/penelopethrock-cyber/askforsupport/issues">Submit it on GitHub</a>.</p>
-  </div>
-</main>
+  <!-- ====== RESOURCES ====== -->
+  <main class="section">
+    <div class="container">
 
-<footer>
-  <p>AskFor.Support — An open resource directory. <a href="https://github.com/penelopethrock-cyber/askforsupport">Contribute on GitHub</a>.</p>
-</footer>
+      <a href="index.html" class="back-link">← Back to All Categories</a>
+
+      <!-- Note Banner -->
+      <div class="note-banner">
+        <span class="note-icon">📝</span>
+        <div>
+          <strong>Note for Penny:</strong> The resources below are vetted general starting points. Please replace or expand this list with your own preferred and personally vetted technology resources — especially local NYC-specific programs you know and trust.
+        </div>
+      </div>
+
+      <div class="resource-grid">
+
+        <!-- Public Libraries -->
+        <div class="resource-card">
+          <span class="resource-type">Free Access</span>
+          <div class="resource-name">NYC Public Libraries — Free Internet &amp; Computers</div>
+          <p class="resource-desc">All NYC public library branches offer free in-library internet access and computer use with no library card required. Libraries also run digital literacy programs to help build basic computer and internet skills. The New York Public Library (NYPL) is a great starting point for Manhattan, the Bronx, and Staten Island.</p>
+          <div class="resource-details">
+            <span><span class="detail-icon">💰</span> Free — no card required for computer use</span>
+            <span><span class="detail-icon">📍</span> Branches in all five boroughs</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://www.nypl.org/locations" target="_blank" rel="noopener" class="btn btn-primary">🌐 Find a Branch</a>
+          </div>
+        </div>
+
+        <!-- Federal Lifeline Program -->
+        <div class="resource-card">
+          <span class="resource-type">Federal Program</span>
+          <div class="resource-name">Federal Lifeline Program</div>
+          <p class="resource-desc">A federal program that provides discounted phone and internet service for low-income households. Eligible households can receive up to $9.25/month credit toward their phone or internet bill (more on Tribal lands). Apply through the National Verifier at lifelinesupport.org.</p>
+          <div class="resource-details">
+            <span><span class="detail-icon">💰</span> Up to $9.25/month discount on phone or internet</span>
+            <span><span class="detail-icon">🌐</span> Apply at lifelinesupport.org</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://www.lifelinesupport.org" target="_blank" rel="noopener" class="btn btn-primary">🌐 Apply at lifelinesupport.org</a>
+          </div>
+        </div>
+
+        <!-- NDIA -->
+        <div class="resource-card">
+          <span class="resource-type">Directory</span>
+          <div class="resource-name">National Digital Inclusion Alliance (NDIA)</div>
+          <p class="resource-desc">A national nonprofit that advocates for digital equity. Their website includes a directory of low-cost internet plans and local digital inclusion programs, searchable by state and city.</p>
+          <div class="resource-details">
+            <span><span class="detail-icon">🌐</span> digitalinclusion.org</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://www.digitalinclusion.org" target="_blank" rel="noopener" class="btn btn-primary">🌐 digitalinclusion.org</a>
+          </div>
+        </div>
+
+        <!-- human-I-T -->
+        <div class="resource-card">
+          <span class="resource-type">Devices &amp; Training</span>
+          <div class="resource-name">human-I-T</div>
+          <p class="resource-desc">Nonprofit that connects low-income individuals and nonprofits with free or low-cost refurbished computers and other devices, subsidized internet service, and digital skills training. Focuses on equity-centered digital access.</p>
+          <div class="resource-details">
+            <span><span class="detail-icon">💰</span> Free and low-cost refurbished devices</span>
+            <span><span class="detail-icon">🌐</span> human-i-t.org</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://www.human-i-t.org" target="_blank" rel="noopener" class="btn btn-primary">🌐 human-i-t.org</a>
+          </div>
+        </div>
+
+      </div><!-- /resource-grid -->
+
+    </div>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Ask For Support</strong> — <a href="index.html">← Back to Home</a></p>
+      <p>Resources are general starting points. Please verify details before applying or visiting.</p>
+    </div>
+  </footer>
 
 </body>
 </html>

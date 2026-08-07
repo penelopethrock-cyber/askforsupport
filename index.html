@@ -3,67 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AskFor.Support — Resource Directory</title>
-  <meta name="description" content="A free, community-maintained directory of helpful resources and services organized by category." />
+  <title>Ask For Support — Find Real Help, Organized Simply</title>
+  <meta name="description" content="A curated directory of support resources for LGBTQIA2S+, Healthcare, Education, and Technology. Find real help, organized simply." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <span class="nav-brand"><span>AskFor</span>.Support</span>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="lgbtqia2s.html">LGBTQIA2S+</a></li>
-      <li><a href="healthcare.html">Healthcare</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="technology.html">Technology</a></li>
-    </ul>
-  </div>
-</nav>
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">Ask For Support</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="lgbtqia2s.html">LGBTQIA2S+</a></li>
+          <li><a href="healthcare.html">Healthcare</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="technology.html">Technology</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<main>
+  <!-- ====== HERO ====== -->
   <section class="hero">
-    <h1>Find the help you<br /><span>need to thrive</span></h1>
-    <p>A free, community-maintained directory of helpful resources, services, and organizations — organized so you can find what matters to you.</p>
+    <div class="hero-inner">
+      <span class="hero-badge">Free &amp; Curated</span>
+      <h1>Ask For <span>Support</span></h1>
+      <p class="hero-tagline">A place to find real help, organized simply. Browse vetted resources across four categories — no signup, no gatekeeping.</p>
+      <a href="#categories" class="hero-cta">Browse Resources ↓</a>
+    </div>
   </section>
 
-  <div class="category-grid">
+  <!-- ====== CATEGORIES ====== -->
+  <section class="section" id="categories">
+    <div class="container">
+      <h2 class="section-title">Resource Categories</h2>
+      <p class="section-subtitle">Click a category to explore real, vetted resources and support organizations.</p>
 
-    <a href="lgbtqia2s.html" class="category-card card-lgbtqia">
-      <div class="card-icon">🏳️‍🌈</div>
-      <h2>LGBTQIA2S+</h2>
-      <p>Support organizations, crisis lines, community groups, legal aid, and affirming healthcare providers.</p>
-      <span class="card-link">Browse resources →</span>
-    </a>
+      <div class="category-grid">
 
-    <a href="healthcare.html" class="category-card card-healthcare">
-      <div class="card-icon">🩺</div>
-      <h2>Healthcare</h2>
-      <p>Mental health, physical health, insurance navigation, clinics, and wellness resources.</p>
-      <span class="card-link">Browse resources →</span>
-    </a>
+        <a href="lgbtqia2s.html" class="category-card">
+          <span class="card-icon">🏳️‍🌈</span>
+          <span class="card-title">LGBTQIA2S+</span>
+          <span class="card-desc">Affirming health services, crisis hotlines, youth support, elder care, and community resources.</span>
+          <span class="card-link-label">Explore → </span>
+        </a>
 
-    <a href="education.html" class="category-card card-education">
-      <div class="card-icon">📚</div>
-      <h2>Education</h2>
-      <p>Scholarships, tutoring, GED programs, continuing education, and learning tools for all ages.</p>
-      <span class="card-link">Browse resources →</span>
-    </a>
+        <a href="healthcare.html" class="category-card">
+          <span class="card-icon">🏥</span>
+          <span class="card-title">Healthcare</span>
+          <span class="card-desc">Low-cost and free clinics, mental health services, crisis lines, and primary care options.</span>
+          <span class="card-link-label">Explore → </span>
+        </a>
 
-    <a href="technology.html" class="category-card card-technology">
-      <div class="card-icon">💻</div>
-      <h2>Technology</h2>
-      <p>Digital literacy, low-cost internet access, device programs, coding resources, and tech support.</p>
-      <span class="card-link">Browse resources →</span>
-    </a>
+        <a href="education.html" class="category-card">
+          <span class="card-icon">📚</span>
+          <span class="card-title">Education</span>
+          <span class="card-desc">GED prep, English classes, career training, free library resources, and online learning.</span>
+          <span class="card-link-label">Explore → </span>
+        </a>
 
-  </div>
-</main>
+        <a href="technology.html" class="category-card">
+          <span class="card-icon">💻</span>
+          <span class="card-title">Technology</span>
+          <span class="card-desc">Free internet access, low-cost devices, digital literacy programs, and broadband assistance.</span>
+          <span class="card-link-label">Explore → </span>
+        </a>
 
-<footer>
-  <p>AskFor.Support — An open resource directory. <a href="https://github.com/penelopethrock-cyber/askforsupport">Contribute on GitHub</a>.</p>
-</footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT ====== -->
+  <section class="section" style="background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container" style="max-width: 680px; text-align: center;">
+      <h2 class="section-title" style="margin-bottom: 0.75rem;">About This Site</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.75;">
+        This directory was built to make it easier to find real support — no jargon, no barriers. Resources are organized by category and include phone numbers, addresses, and direct links wherever possible. Know a resource that should be here? Reach out.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Ask For Support</strong> — askfor.support</p>
+      <p>A personal directory of real resources. Not a crisis line. If you need immediate help, call <strong>988</strong> (Suicide &amp; Crisis Lifeline) or <strong>911</strong>.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
