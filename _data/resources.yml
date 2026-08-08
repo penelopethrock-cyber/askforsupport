@@ -22,11 +22,6 @@ healthcare:
     address: "Walton Family Health Center, 1894 Walton Avenue, Bronx, NY 10453"
     link: "https://institute.org"
 
-  - name: "Why Answering 'Yes' to Disability on Medicaid Applications Matters"
-    description: "Answering 'yes' when asked about disability on a Medicaid/Marketplace application routes you to the disability-based Medicaid pathway (ABD/non-MAGI), which often has higher income limits and different income-counting rules than standard MAGI Medicaid. Skipping or marking 'no' when a qualifying condition applies can cause you to miss eligibility."
-    link: "https://www.healthcare.gov/people-with-disabilities/ssi-and-medicaid"
-    secondary_link: "https://www.disabilityrightsca.org/publications/determining-eligibility-under-the-aged-blind-disabled-federal-poverty-level-abd-fpl"
-
 education:
   - name: Brooklyn College Adult Literacy Program (BCALP)
     description: "Free GED/HSE prep and ESOL classes for NY residents 18+, with case management."
@@ -66,3 +61,29 @@ opwdd:
     description: "The standard entry process for OPWDD services in NY: (1) Contact the Front Door/OPWDD Infoline or a Care Manager; (2) Complete eligibility determination (documentation of I/DD); (3) Enroll in a Care Coordination Organization; (4) Develop a Life Plan; (5) Access services through your plan."
     phone: "OPWDD Infoline: 1-866-946-9733"
     link: "https://opwdd.ny.gov/get-started/front-door"
+disability_services:
+  - name: OPWDD Self-Direction
+    description: "New York State's self-direction program lets individuals with developmental disabilities design their own support services and hire their own workers, with a Medicaid Service Coordinator (MSC) or Support Broker to help manage the budget."
+    phone: "1-866-946-9733"
+    address: "Statewide; NYC regional office: 25 Beaver Street, New York, NY 10004"
+    link: "https://opwdd.ny.gov/self-direction"
+  - name: OPWDD Front Door
+    description: "The Front Door is OPWDD's person-centered process for establishing eligibility and access to services for people who are new to OPWDD or seeking to modify existing services. Steps: (1) Call the OPWDD Infoline and ask to be transferred to your local Front Door office by county. (2) Attend a Front Door information session to learn about eligibility and services. (3) Submit a complete eligibility packet (medical, psychological, and educational evaluations documenting a qualifying developmental disability, such as autism, intellectual disability, or Down syndrome, plus 3+ adaptive scores in the low range). (4) Complete a DDP-2 phone interview, usually about a week after the Front Door session. (5) Receive an eligibility determination letter, typically within 2-4 weeks. (6) Once eligible, choose a Care Coordination Organization (CCO) and enroll with a Care Manager to build a person-centered Life Plan. The whole process usually takes 3-6 months."
+    phone: "1-866-946-9733"
+    address: "Regional Front Door offices by county; NYC Developmental Disabilities Regional Office (DDRO), 25 Beaver Street, 4th Floor, New York, NY 10004"
+    link: "https://opwdd.ny.gov/get-started/front-door"
+  - name: Care Design NY
+    description: "One of the three Care Coordination Organizations (CCOs) serving all five NYC boroughs. Provides Health Home Care Management, combining developmental disability services with health and wellness coordination for people with I/DD."
+    phone: "518-235-1888"
+    address: "Serves all 5 boroughs; borough enrollment specialists available (Bronx, Brooklyn, Queens, Manhattan, Staten Island)"
+    link: "https://caredesignny.org"
+  - name: Tri-County Care
+    description: "One of the three Care Coordination Organizations (CCOs) serving all five NYC boroughs, including Brooklyn, Queens, Staten Island, Bronx, and Manhattan. Provides Health Home Care Management for people with I/DD."
+    phone: "1-844-504-8400"
+    address: "Serves all 5 boroughs; NYC offices in Brooklyn and Long Island City"
+    link: "https://tricountycare.org"
+  - name: Advance Care Alliance (ACA/NY)
+    description: "One of the three Care Coordination Organizations (CCOs) serving all five NYC boroughs. Provides Health Home Care Management, Comprehensive Care Management, and Person and Family Support for people with I/DD."
+    phone: "1-833-692-2269"
+    address: "Regional offices in Manhattan (263 West 38th Street) and Staten Island (260 Christopher Lane), serving all 5 boroughs"
+    link: "https://acany.org"
