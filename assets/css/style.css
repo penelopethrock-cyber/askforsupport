@@ -1,5 +1,5 @@
 /* =====================================================================
-   Cozy Pastel Theme ✦ askfor.support
+   Cozy Pastel Theme â¦ askfor.support
    Warm, safe, welcoming for LGBTQIA2S+, Healthcare,
    Education, and Technology support.
    Fonts: Baloo 2 (headings) + Nunito (body) via Google Fonts
@@ -7,7 +7,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap');
 
-/* ── Custom Properties ───────────────────────────────────────────────── */
+/* ââ Custom Properties âââââââââââââââââââââââââââââââââââââââââââââââââ */
 :root {
   --pink:          #F2B8C6;
   --lavender:      #C9C4E8;
@@ -29,15 +29,15 @@
   --transition:    0.22s ease;
 }
 
-/* ── Reset ─────────────────────────────────────────────────────────── */
+/* ââ Reset âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ── Body + Background ──────────────────────────────────────────────
-  Five-stop dusty pastel diagonal gradient: pink → lavender → mint → yellow → green
+/* ââ Body + Background ââââââââââââââââââââââââââââââââââââââââââââââ
+  Five-stop dusty pastel diagonal gradient: pink â lavender â mint â yellow â green
   Over that, five staggered SVG tile layers with varied heart/star sizes and offsets
   to fake a scattered, non-uniform feel.
 */
@@ -48,15 +48,15 @@ body {
   color: var(--text);
   background-color: #E88C4D0;
   background-image:
-    /* ── Layer A: large chunky hearts, medium filled stars, 180×180 tile ── */
+    /* ââ Layer A: large chunky hearts, medium filled stars, 180Ã180 tile ââ */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3C!-- big filled heart --%3E%3Cpath d='M38 58 C38 46 26 40 18 48 C10 56 18 72 38 84 C58 72 66 56 58 48 C50 40 38 46 38 58Z' fill='%23E07898' opacity='0.13'/%3E%3C!-- medium filled star --%3E%3Cpath d='M130 22 L135 37 L151 37 L139 47 L143 62 L130 52 L117 62 L121 47 L109 37 L125 37Z' fill='%23C3B6E0' opacity='0.14'/%3E%3C!-- small chunky heart --%3E%3Cpath d='M155 115 C155 110 149 107 146 110 C143 113 146 120 155 126 C164 120 167 113 164 110 C161 107 155 110 155 115Z' fill='%23E07898' opacity='0.12'/%3E%3C/svg%3E"),
-    /* ── Layer B: medium hearts + tiny stars, 130×130 tile, offset ── */
+    /* ââ Layer B: medium hearts + tiny stars, 130Ã130 tile, offset ââ */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3C!-- medium filled heart --%3E%3Cpath d='M28 44 C28 37 20 32 14 38 C8 44 14 56 28 65 C42 56 48 44 42 38 C36 32 28 37 28 44Z' fill='%23A8D4B8' opacity='0.15'/%3E%3C!-- small 5pt star --%3E%3Cpath d='M100 18 L103 27 L113 27 L105 33 L108 42 L100 36 L92 42 L95 33 L87 27 L97 27Z' fill='%23E8CF78' opacity='0.16'/%3E%3C!-- tiny heart --%3E%3Cpath d='M60 95 C60 92 56 90 54 92 C52 94 54 99 60 103 C66 99 68 94 66 92 C64 90 60 92 60 95Z' fill='%23DDA0B8' opacity='0.13'/%3E%3C/svg%3E"),
-    /* ── Layer C: tiny dense hearts, small stars, 90×90 tile, rotated feel via offset ── */
+    /* ââ Layer C: tiny dense hearts, small stars, 90Ã90 tile, rotated feel via offset ââ */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3C!-- chunky small heart --%3E%3Cpath d='M20 30 C20 25 14 22 10 26 C6 30 10 38 20 44 C30 38 34 30 30 26 C26 22 20 25 20 30Z' fill='%23C3B6E0' opacity='0.14'/%3E%3C!-- tiny 5pt star --%3E%3Cpath d='M68 55 L70 61 L76 61 L71 65 L73 71 L68 67 L63 71 L65 65 L60 61 L66 61Z' fill='%23A8DFC5' opacity='0.16'/%3E%3C/svg%3E"),
-    /* ── Layer D: big airy star + small heart, 220×220 tile, wide spacing ── */
+    /* ââ Layer D: big airy star + small heart, 220Ã220 tile, wide spacing ââ */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3C!-- big 5pt star --%3E%3Cpath d='M110 18 L118 42 L144 42 L123 57 L131 81 L110 66 L89 81 L97 57 L76 42 L102 42Z' fill='%23E8CF78' opacity='0.11'/%3E%3C!-- small heart upper-right --%3E%3Cpath d='M178 50 C178 45 172 42 169 45 C166 48 169 55 178 60 C187 55 190 48 187 45 C184 42 178 45 178 50Z' fill='%23E07898' opacity='0.12'/%3E%3C!-- tiny star lower-left --%3E%3Cpath d='M44 160 L46 167 L53 167 L48 171 L50 178 L44 174 L38 178 L40 171 L35 167 L42 167Z' fill='%23C3B6E0' opacity='0.13'/%3E%3C/svg%3E"),
-    /* ── Layer E: base diagonal gradient pink→lavender→mint→yellow→green ── */
+    /* ââ Layer E: base diagonal gradient pinkâlavenderâmintâyellowâgreen ââ */
     linear-gradient(135deg,
       #F2B8C6 0%,
       #E0D4F0 22%,
@@ -80,14 +80,14 @@ body {
   min-height: 100vh;
 }
 
-/* ── Container ─────────────────────────────────────────────────────── */
+/* ââ Container âââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .container {
   max-width: 1040px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ── Typography ─────────────────────────────────────────────────────── */
+/* ââ Typography âââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Baloo 2', 'Segoe UI', Arial, sans-serif;
   font-weight: 700;
@@ -106,7 +106,7 @@ a:hover, a:focus {
   color: #8a2d50;
 }
 
-/* ── Site Header ─────────────────────────────────────────────────────── */
+/* ââ Site Header âââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .site-header {
   background: linear-gradient(90deg, var(--header-bg) 0%, #D8C8F0 100%);
   padding: 18px 0 14px;
@@ -152,43 +152,38 @@ a:hover, a:focus {
   flex: 1 1 auto;
 }
 
-/* ── MIT License Badge ───────────────────────────────────────────────── */
-.mit-badge {
+/* ââ License Badge (fixed bottom-right) ââââââââââââââââââââââââââ */
+.license-badge {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 999;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  flex: 0 0 auto;
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0.03em;
-  color: #6b5d87 !important;
-  background: rgba(201, 196, 232, 0.55);
-  border: 1.5px solid rgba(180, 160, 220, 0.60);
-  border-radius: 999px;
-  padding: 4px 10px;
   text-decoration: none !important;
-  transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
-  white-space: nowrap;
+  opacity: 0.80;
+  transition: opacity var(--transition), transform var(--transition), box-shadow var(--transition);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(90, 75, 89, 0.18);
+  line-height: 1;
 }
 
-.mit-badge::before {
-  content: "⚖";
-  font-size: 0.75em;
-  opacity: 0.75;
+.license-badge img {
+  display: block;
+  height: 20px;
+  width: auto;
+  border-radius: 4px;
 }
 
-.mit-badge:hover,
-.mit-badge:focus {
-  background: rgba(180, 160, 220, 0.75);
-  box-shadow: 0 2px 8px rgba(160, 130, 200, 0.35);
-  transform: translateY(-1px);
-  color: #4a3a6b !important;
+.license-badge:hover,
+.license-badge:focus {
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(160, 130, 200, 0.40);
   outline: none;
 }
 
-/* ── Main Nav ─────────────────────────────────────────────────────────── */
+/* ââ Main Nav âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -223,13 +218,13 @@ a:hover, a:focus {
   outline: none;
 }
 
-/* ── Main Content ─────────────────────────────────────────────────────── */
+/* ââ Main Content âââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 main {
   padding: 44px 0 60px;
   min-height: 60vh;
 }
 
-/* ── Hero Section ─────────────────────────────────────────────────────── */
+/* ââ Hero Section âââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .hero {
   text-align: center;
   margin-bottom: 48px;
@@ -255,14 +250,14 @@ main {
   margin: 0 auto;
 }
 
-/* ── Category Cards Grid ───────────────────────────────────────────────── */
+/* ââ Category Cards Grid âââââââââââââââââââââââââââââââââââââââââââââââââ */
 .category-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 22px;
 }
 
-/* ── Card (shared) ─────────────────────────────────────────────────────── */
+/* ââ Card (shared) âââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .card,
 .resource-card {
   background: var(--card-bg);
@@ -299,7 +294,7 @@ main {
   line-height: 1.6;
 }
 
-/* ── Resource List Grid ─────────────────────────────────────────────── */
+/* ââ Resource List Grid âââââââââââââââââââââââââââââââââââââââââââââââ */
 .resource-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -307,7 +302,7 @@ main {
   margin-top: 32px;
 }
 
-/* ── Resource Card ─────────────────────────────────────────────────── */
+/* ââ Resource Card âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .resource-card:hover,
 .resource-card:focus {
   transform: translateY(-5px);
@@ -338,7 +333,7 @@ main {
   font-size: 0.95rem;
 }
 
-/* Resource card action links — pill buttons */
+/* Resource card action links â pill buttons */
 .resource-card a {
   display: inline-block;
   margin-top: 12px;
@@ -364,7 +359,7 @@ main {
   outline: none;
 }
 
-/* ── Site Footer ───────────────────────────────────────────────────────── */
+/* ââ Site Footer âââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .site-footer {
   text-align: center;
   padding: 28px 0;
@@ -386,7 +381,7 @@ main {
   color: #8a2d50;
 }
 
-/* ── Accessibility: Focus visible ──────────────────────────────────────── */
+/* ââ Accessibility: Focus visible ââââââââââââââââââââââââââââââââââââââââ */
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--accent-pink);
@@ -394,7 +389,7 @@ button:focus-visible {
   border-radius: 4px;
 }
 
-/* ── Responsive ─────────────────────────────────────────────────────────── */
+/* ââ Responsive âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 @media (max-width: 768px) {
   .site-header {
     border-radius: 0 0 14px 14px;
