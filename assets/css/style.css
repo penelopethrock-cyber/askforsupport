@@ -7,60 +7,87 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap');
 
-/* ── Custom Properties ─────────────────────────────────────── */
+/* ── Custom Properties ──────────────────────────────────────────── */
 :root {
-  --pink:        #FFD1DC;
-  --lavender:    #E6E6FA;
-  --mint:        #CFFFE5;
-  --yellow:      #FFF5BA;
-  --peach:       #FFDAB9;
-  --accent-pink: #FF9EB5;
-  --accent-dark: #e0607e;
-  --text:        #5A4B59;
-  --text-light:  #7a6679;
-  --card-bg:     #ffffff;
-  --header-bg:   #FFE4EC;
-  --footer-bg:   #F0E8FF;
-  --border-r:    18px;
-  --shadow-sm:   0 2px 8px rgba(90, 75, 89, 0.10);
-  --shadow-md:   0 6px 20px rgba(90, 75, 89, 0.15);
-  --shadow-lg:   0 12px 32px rgba(90, 75, 89, 0.20);
-  --transition:  0.22s ease;
+  --pink:          #F2B8C6;
+  --lavender:      #C9C4E8;
+  --mint:          #A8DFC5;
+  --yellow:        #E8D88A;
+  --green:         #9ECFAA;
+  --peach:         #F0C4A0;
+  --accent-pink:   #E07898;
+  --accent-dark:   #b84d6a;
+  --text:          #5A4B59;
+  --text-light:    #7a6679;
+  --card-bg:       #ffffff;
+  --header-bg:     #F2C8D4;
+  --footer-bg:     #D8CEF0;
+  --border-r:      18px;
+  --shadow-sm:     0 2px 8px rgba(90, 75, 89, 0.10);
+  --shadow-md:     0 6px 20px rgba(90, 75, 89, 0.15);
+  --shadow-lg:     0 12px 32px rgba(90, 75, 89, 0.20);
+  --transition:    0.22s ease;
 }
 
-/* ── Reset ─────────────────────────────────────────────────── */
+/* ── Reset ────────────────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ── Body + Background ─────────────────────────────────────── */
-/*
-  Layer 1 (top): repeating SVG tile of outlined hearts + stars
-  Layer 2 (bottom): soft diagonal gradient pink → lavender → mint
+/* ── Body + Background ───────────────────────────────────────────
+  Five-stop dusty pastel diagonal gradient: pink → lavender → mint → yellow → green
+  Over that, five staggered SVG tile layers with varied heart/star sizes and offsets
+  to fake a scattered, non-uniform feel.
 */
 body {
   font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text);
-  background-color: #fce8f0;
+  background-color: #E8C4D0;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3C!-- heart 1 --%3E%3Cpath d='M20 38 C20 32 13 28 8 33 C3 38 8 48 20 55 C32 48 37 38 32 33 C27 28 20 32 20 38Z' fill='none' stroke='%23FF9EB5' stroke-width='1.4' opacity='0.22'/%3E%3C!-- star 1 --%3E%3Cpolygon points='90,14 93,23 103,23 95,29 98,38 90,32 82,38 85,29 77,23 87,23' fill='none' stroke='%23C8A4D4' stroke-width='1.3' opacity='0.20'/%3E%3C!-- heart 2 (small) --%3E%3Cpath d='M65 85 C65 81 60 79 57 82 C54 85 57 91 65 96 C73 91 76 85 73 82 C70 79 65 81 65 85Z' fill='none' stroke='%23FFB3C6' stroke-width='1.2' opacity='0.18'/%3E%3C!-- star 2 (small) --%3E%3Cpolygon points='28,95 30,101 36,101 31,105 33,111 28,107 23,111 25,105 20,101 26,101' fill='none' stroke='%23B5EAD7' stroke-width='1.2' opacity='0.20'/%3E%3C!-- tiny heart --%3E%3Cpath d='M100 60 C100 57 96 55 94 57 C92 59 94 63 100 67 C106 63 108 59 106 57 C104 55 100 57 100 60Z' fill='none' stroke='%23FDCFE8' stroke-width='1.1' opacity='0.16'/%3E%3C/svg%3E"),
-    linear-gradient(135deg, #FFD1DC 0%, #E6E6FA 45%, #CFFFE5 100%);
+    /* ── Layer A: large chunky hearts, medium filled stars, 180×180 tile ── */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3C!-- big filled heart --%3E%3Cpath d='M38 58 C38 46 26 40 18 48 C10 56 18 72 38 84 C58 72 66 56 58 48 C50 40 38 46 38 58Z' fill='%23E07898' opacity='0.13'/%3E%3C!-- medium filled star --%3E%3Cpath d='M130 22 L135 37 L151 37 L139 47 L143 62 L130 52 L117 62 L121 47 L109 37 L125 37Z' fill='%23C3B6E0' opacity='0.14'/%3E%3C!-- small chunky heart --%3E%3Cpath d='M155 115 C155 110 149 107 146 110 C143 113 146 120 155 126 C164 120 167 113 164 110 C161 107 155 110 155 115Z' fill='%23E07898' opacity='0.12'/%3E%3C/svg%3E"),
+    /* ── Layer B: medium hearts + tiny stars, 130×130 tile, offset ── */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3C!-- medium filled heart --%3E%3Cpath d='M28 44 C28 37 20 32 14 38 C8 44 14 56 28 65 C42 56 48 44 42 38 C36 32 28 37 28 44Z' fill='%23A8D4B8' opacity='0.15'/%3E%3C!-- small 5pt star --%3E%3Cpath d='M100 18 L103 27 L113 27 L105 33 L108 42 L100 36 L92 42 L95 33 L87 27 L97 27Z' fill='%23E8CF78' opacity='0.16'/%3E%3C!-- tiny heart --%3E%3Cpath d='M60 95 C60 92 56 90 54 92 C52 94 54 99 60 103 C66 99 68 94 66 92 C64 90 60 92 60 95Z' fill='%23DDA0B8' opacity='0.13'/%3E%3C/svg%3E"),
+    /* ── Layer C: tiny dense hearts, small stars, 90×90 tile, rotated feel via offset ── */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3C!-- chunky small heart --%3E%3Cpath d='M20 30 C20 25 14 22 10 26 C6 30 10 38 20 44 C30 38 34 30 30 26 C26 22 20 25 20 30Z' fill='%23C3B6E0' opacity='0.14'/%3E%3C!-- tiny 5pt star --%3E%3Cpath d='M68 55 L70 61 L76 61 L71 65 L73 71 L68 67 L63 71 L65 65 L60 61 L66 61Z' fill='%23A8DFC5' opacity='0.16'/%3E%3C/svg%3E"),
+    /* ── Layer D: big airy star + small heart, 220×220 tile, wide spacing ── */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3C!-- big 5pt star --%3E%3Cpath d='M110 18 L118 42 L144 42 L123 57 L131 81 L110 66 L89 81 L97 57 L76 42 L102 42Z' fill='%23E8CF78' opacity='0.11'/%3E%3C!-- small heart upper-right --%3E%3Cpath d='M178 50 C178 45 172 42 169 45 C166 48 169 55 178 60 C187 55 190 48 187 45 C184 42 178 45 178 50Z' fill='%23E07898' opacity='0.12'/%3E%3C!-- tiny star lower-left --%3E%3Cpath d='M44 160 L46 167 L53 167 L48 171 L50 178 L44 174 L38 178 L40 171 L35 167 L42 167Z' fill='%23C3B6E0' opacity='0.13'/%3E%3C/svg%3E"),
+    /* ── Layer E: base diagonal gradient pink→lavender→mint→yellow→green ── */
+    linear-gradient(135deg,
+      #F2B8C6 0%,
+      #E0D4F0 22%,
+      #C9C4E8 40%,
+      #A8DFC5 60%,
+      #D6E490 78%,
+      #9ECFAA 100%);
+  background-size:
+    180px 180px,
+    130px 130px,
+    90px  90px,
+    220px 220px,
+    100% 100%;
+  background-position:
+    0 0,
+    65px 45px,
+    30px 20px,
+    110px 80px,
+    0 0;
   background-attachment: fixed;
   min-height: 100vh;
 }
 
-/* ── Container ─────────────────────────────────────────────── */
+/* ── Container ──────────────────────────────────────────────── */
 .container {
   max-width: 1040px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ── Typography ────────────────────────────────────────────── */
+/* ── Typography ─────────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Baloo 2', 'Segoe UI', Arial, sans-serif;
   font-weight: 700;
@@ -76,12 +103,12 @@ a {
 }
 
 a:hover, a:focus {
-  color: #b04060;
+  color: #8a2d50;
 }
 
-/* ── Site Header ───────────────────────────────────────────── */
+/* ── Site Header ─────────────────────────────────────────────── */
 .site-header {
-  background: linear-gradient(90deg, var(--header-bg) 0%, #EDE0FF 100%);
+  background: linear-gradient(90deg, var(--header-bg) 0%, #D8C8F0 100%);
   padding: 18px 0 14px;
   box-shadow: var(--shadow-sm);
   border-radius: 0 0 20px 20px;
@@ -108,7 +135,7 @@ a:hover, a:focus {
   color: var(--accent-dark);
 }
 
-/* ── Main Nav ──────────────────────────────────────────────── */
+/* ── Main Nav ────────────────────────────────────────────────── */
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -127,7 +154,7 @@ a:hover, a:focus {
   padding: 6px 16px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.55);
-  border: 1.5px solid rgba(255, 158, 181, 0.35);
+  border: 1.5px solid rgba(224, 120, 152, 0.35);
   transition: background var(--transition), color var(--transition), box-shadow var(--transition), transform var(--transition);
   display: inline-block;
 }
@@ -137,19 +164,19 @@ a:hover, a:focus {
   background: var(--accent-pink);
   color: #ffffff;
   border-color: var(--accent-pink);
-  box-shadow: 0 3px 10px rgba(255, 158, 181, 0.40);
+  box-shadow: 0 3px 10px rgba(224, 120, 152, 0.40);
   transform: translateY(-2px);
   text-decoration: none;
   outline: none;
 }
 
-/* ── Main Content ──────────────────────────────────────────── */
+/* ── Main Content ────────────────────────────────────────────── */
 main {
   padding: 44px 0 60px;
   min-height: 60vh;
 }
 
-/* ── Hero Section ──────────────────────────────────────────── */
+/* ── Hero Section ────────────────────────────────────────────── */
 .hero {
   text-align: center;
   margin-bottom: 48px;
@@ -175,14 +202,14 @@ main {
   margin: 0 auto;
 }
 
-/* ── Category Cards Grid ───────────────────────────────────── */
+/* ── Category Cards Grid ─────────────────────────────────────── */
 .category-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 22px;
 }
 
-/* ── Card (shared) ─────────────────────────────────────────── */
+/* ── Card (shared) ───────────────────────────────────────────── */
 .card,
 .resource-card {
   background: var(--card-bg);
@@ -193,7 +220,7 @@ main {
   color: inherit;
   display: block;
   transition: transform var(--transition), box-shadow var(--transition);
-  border: 1.5px solid rgba(230, 230, 250, 0.80);
+  border: 1.5px solid rgba(201, 196, 232, 0.80);
 }
 
 .card:hover,
@@ -219,7 +246,7 @@ main {
   line-height: 1.6;
 }
 
-/* ── Resource List Grid ────────────────────────────────────── */
+/* ── Resource List Grid ──────────────────────────────────────── */
 .resource-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -227,13 +254,13 @@ main {
   margin-top: 32px;
 }
 
-/* ── Resource Card ─────────────────────────────────────────── */
+/* ── Resource Card ───────────────────────────────────────────── */
 .resource-card:hover,
 .resource-card:focus {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
   outline: none;
-  border-color: rgba(200, 164, 212, 0.70);
+  border-color: rgba(180, 144, 200, 0.70);
 }
 
 .resource-card h3 {
@@ -263,32 +290,32 @@ main {
   display: inline-block;
   margin-top: 12px;
   color: #ffffff;
-  background: linear-gradient(135deg, var(--accent-pink) 0%, #e5789a 100%);
+  background: linear-gradient(135deg, var(--accent-pink) 0%, #c85c7a 100%);
   padding: 8px 20px;
   border-radius: 999px;
   text-decoration: none;
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
   font-size: 0.92rem;
-  box-shadow: 0 3px 10px rgba(255, 158, 181, 0.30);
+  box-shadow: 0 3px 10px rgba(224, 120, 152, 0.30);
   transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
   border: none;
 }
 
 .resource-card a:hover,
 .resource-card a:focus {
-  background: linear-gradient(135deg, #e0607e 0%, #c84a72 100%);
-  box-shadow: 0 5px 16px rgba(255, 90, 140, 0.38);
+  background: linear-gradient(135deg, #b84d6a 0%, #9e3858 100%);
+  box-shadow: 0 5px 16px rgba(184, 77, 106, 0.38);
   transform: translateY(-2px);
   color: #ffffff;
   outline: none;
 }
 
-/* ── Site Footer ───────────────────────────────────────────── */
+/* ── Site Footer ─────────────────────────────────────────────── */
 .site-footer {
   text-align: center;
   padding: 28px 0;
-  background: linear-gradient(90deg, var(--footer-bg) 0%, #FFE4EC 100%);
+  background: linear-gradient(90deg, var(--footer-bg) 0%, #C8D8F0 100%);
   margin-top: 56px;
   border-radius: 20px 20px 0 0;
   box-shadow: 0 -2px 12px rgba(90, 75, 89, 0.08);
@@ -303,10 +330,10 @@ main {
 
 .site-footer a:hover,
 .site-footer a:focus {
-  color: #b04060;
+  color: #8a2d50;
 }
 
-/* ── Accessibility: Focus visible ──────────────────────────── */
+/* ── Accessibility: Focus visible ───────────────────────────── */
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--accent-pink);
@@ -314,7 +341,7 @@ button:focus-visible {
   border-radius: 4px;
 }
 
-/* ── Responsive ────────────────────────────────────────────── */
+/* ── Responsive ──────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .site-header {
     border-radius: 0 0 14px 14px;
