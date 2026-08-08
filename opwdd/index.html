@@ -1,19 +1,56 @@
 ---
 layout: default
-title: OPWDD & Care Coordination
+title: OPWDD &amp; Care Coordination
 ---
-<h2>OPWDD &amp; Care Coordination</h2>
-<p>Care Coordination Organizations serving all 5 NYC boroughs and how to access OPWDD services for people with I/DD.</p>
+<section class="page-header">
+  <div class="page-icon">&#129309;</div>
+  <h1>OPWDD &amp; Care Coordination</h1>
+  <p>Care Coordination Organizations (CCOs) serving all 5 NYC boroughs and how to access OPWDD services through the Front Door process.</p>
+</section>
+<a href="/" class="back-link">&#8592; Back to All Categories</a>
 
-<div class="resource-list">
+<h2 class="section-heading">NYC Care Coordination Organizations (CCOs)</h2>
+<p class="section-intro">These three organizations provide Medicaid Service Coordination (MSC) and Health Home care management for people with intellectual/developmental disabilities (I/DD) enrolled in OPWDD services. All three serve all 5 NYC boroughs.</p>
+
+<div class="resource-grid">
   {% for resource in site.data.resources.opwdd %}
   <div class="resource-card">
-    <h3>{{ resource.name }}</h3>
-    <p class="desc">{{ resource.description }}</p>
-    {% if resource.phone %}<p><strong>Phone:</strong> {{ resource.phone }}</p>{% endif %}
-    {% if resource.address %}<p><strong>Address:</strong> {{ resource.address }}</p>{% endif %}
-    {% if resource.link %}<p><a href="{{ resource.link }}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>{% endif %}
-    {% if resource.note %}<p class="resource-note"><em>{{ resource.note }}</em></p>{% endif %}
+    {% if resource.type %}<span class="resource-type">{{ resource.type }}</span>{% endif %}
+    <div class="resource-name">{{ resource.name }}</div>
+    <p class="resource-desc">{{ resource.description }}</p>
+    <div class="resource-details">
+      {% if resource.address %}<span><span class="detail-icon">&#128205;</span> {{ resource.address }}</span>{% endif %}
+      {% if resource.phone %}<span><span class="detail-icon">&#128222;</span> {{ resource.phone }}</span>{% endif %}
+      {% if resource.hours %}<span><span class="detail-icon">&#128336;</span> {{ resource.hours }}</span>{% endif %}
+    </div>
+    <div class="card-actions">
+      {% if resource.link %}<a href="{{ resource.link }}" target="_blank" rel="noopener" class="btn btn-primary">&#127760; Visit Website</a>{% endif %}
+    </div>
   </div>
   {% endfor %}
+</div>
+
+<h2 class="section-heading">The OPWDD &ldquo;Front Door&rdquo;</h2>
+<p class="section-intro">The &ldquo;Front Door&rdquo; is the process for people with developmental disabilities to become eligible for OPWDD services and start a service plan.</p>
+
+<div class="resource-grid">
+  <div class="resource-card">
+    <span class="resource-type">Access Process</span>
+    <div class="resource-name">OPWDD Front Door &ndash; Region 4 (NYC)</div>
+    <p class="resource-desc">Step-by-step guidance for NYC residents to access services. Includes info on eligibility, assessment, and finding a CCO.</p>
+    <div class="resource-details">
+      <span><span class="detail-icon">&#128222;</span> Region 4 Front Door: (718) 722-2500</span>
+    </div>
+    <div class="card-actions">
+      <a href="https://opwdd.ny.gov/get-started/front-door" target="_blank" rel="noopener" class="btn btn-primary">&#127760; Official Front Door Info</a>
+    </div>
+  </div>
+  <div class="resource-card">
+    <span class="resource-type">Eligibility Info</span>
+    <div class="resource-name">OPWDD Eligibility Requirements</div>
+    <p class="resource-desc">Documentation required for eligibility, including psychological evaluations and proof of disability onset before age 22.</p>
+    <div class="card-actions">
+      <a href="https://opwdd.ny.gov/eligibility" target="_blank" rel="noopener" class="btn btn-secondary">&#127760; View Requirements</a>
+    </div>
+  </div>
 </div>
