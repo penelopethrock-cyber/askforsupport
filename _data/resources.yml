@@ -21,10 +21,6 @@ healthcare:
     phone: "(347) 854-0170"
     address: "Walton Family Health Center, 1894 Walton Avenue, Bronx, NY 10453"
     link: "https://institute.org"
-  - name: "OPWDD Application & Admission Process Guide"
-    description: "A step-by-step guide to New York State OPWDD eligibility and services for NYC residents — covers the Front Door process, required documents, the 3-step eligibility review, choosing a Care Coordination Organization, Medicaid enrollment, and building a Life Plan. Includes contact info for all 5 borough DDROs."
-    address: "N/A"
-    link: "/assets/docs/opwdd-guide.pdf"
 
 education:
   - name: Brooklyn College Adult Literacy Program (BCALP)
@@ -46,3 +42,22 @@ technology:
     phone: "(212) 714-8400"
     address: "Multiple locations, e.g. NYPL 53rd Street Library, 18 West 53rd Street, New York, NY 10019"
     link: "https://nyc.gov/content/oti/pages/free-computer-centers"
+
+opwdd:
+  - name: Care Design NY
+    description: "Provides comprehensive Health Home care management and Medicaid Service Coordination (MSC) for people with I/DD enrolled in OPWDD services. Serves all 5 NYC boroughs."
+    phone: "(518) 235-1888"
+    link: "https://caredesignny.org"
+  - name: Tri-County Care
+    description: "A New York CCO providing Health Home care management and MSC for people with I/DD enrolled in OPWDD services, with offices in Brooklyn, Long Island City, and other locations."
+    phone: "844-504-8400"
+    link: "https://tricountycare.org"
+    note: "As of mid-2026, OPWDD reports Tri-County Care has paused new enrollments. Contact OPWDD or another CCO if enrolling for the first time."
+  - name: Advance Care Alliance of NY (ACA-NY)
+    description: "A nonprofit CCO providing Health Home care management and MSC for people with I/DD enrolled in OPWDD services across all 5 NYC boroughs. Customer service available 24 hours a day."
+    phone: "1-833-692-2269 (24/7 Customer Service)"
+    link: "https://acany.org"
+  - name: "OPWDD Front Door — How to Access Services"
+    description: "The standard entry process for OPWDD services in NY: (1) Contact the Front Door/OPWDD Infoline or a Care Manager; (2) Complete eligibility determination (documentation of I/DD); (3) Enroll in a Care Coordination Organization; (4) Develop a Life Plan; (5) Access services through your plan."
+    phone: "OPWDD Infoline: 1-866-946-9733"
+    link: "https://opwdd.ny.gov/get-started/front-door"

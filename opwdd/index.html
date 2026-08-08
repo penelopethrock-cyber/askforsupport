@@ -1,0 +1,19 @@
+---
+layout: default
+title: OPWDD & Care Coordination
+---
+<h2>OPWDD &amp; Care Coordination</h2>
+<p>Care Coordination Organizations serving all 5 NYC boroughs and how to access OPWDD services for people with I/DD.</p>
+
+<div class="resource-list">
+  {% for resource in site.data.resources.opwdd %}
+  <div class="resource-card">
+    <h3>{{ resource.name }}</h3>
+    <p class="desc">{{ resource.description }}</p>
+    {% if resource.phone %}<p><strong>Phone:</strong> {{ resource.phone }}</p>{% endif %}
+    {% if resource.address %}<p><strong>Address:</strong> {{ resource.address }}</p>{% endif %}
+    {% if resource.link %}<p><a href="{{ resource.link }}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>{% endif %}
+    {% if resource.note %}<p class="resource-note"><em>{{ resource.note }}</em></p>{% endif %}
+  </div>
+  {% endfor %}
+</div>
