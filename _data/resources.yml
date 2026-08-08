@@ -22,6 +22,11 @@ healthcare:
     address: "Walton Family Health Center, 1894 Walton Avenue, Bronx, NY 10453"
     link: "https://institute.org"
 
+  - name: "Why Answering 'Yes' to Disability on Medicaid Applications Matters"
+    description: "Answering 'yes' when asked about disability on a Medicaid/Marketplace application routes you to the disability-based Medicaid pathway (ABD/non-MAGI), which often has higher income limits and different income-counting rules than standard MAGI Medicaid. Skipping or marking 'no' when a qualifying condition applies can cause you to miss eligibility."
+    link: "https://www.healthcare.gov/people-with-disabilities/ssi-and-medicaid"
+    secondary_link: "https://www.disabilityrightsca.org/publications/determining-eligibility-under-the-aged-blind-disabled-federal-poverty-level-abd-fpl"
+
 education:
   - name: Brooklyn College Adult Literacy Program (BCALP)
     description: "Free GED/HSE prep and ESOL classes for NY residents 18+, with case management."
@@ -57,7 +62,7 @@ opwdd:
     description: "A nonprofit CCO providing Health Home care management and MSC for people with I/DD enrolled in OPWDD services across all 5 NYC boroughs. Customer service available 24 hours a day."
     phone: "1-833-692-2269 (24/7 Customer Service)"
     link: "https://acany.org"
-  - name: "OPWDD Front Door — How to Access Services"
+  - name: "OPWDD Front Door â How to Access Services"
     description: "The standard entry process for OPWDD services in NY: (1) Contact the Front Door/OPWDD Infoline or a Care Manager; (2) Complete eligibility determination (documentation of I/DD); (3) Enroll in a Care Coordination Organization; (4) Develop a Life Plan; (5) Access services through your plan."
     phone: "OPWDD Infoline: 1-866-946-9733"
     link: "https://opwdd.ny.gov/get-started/front-door"
