@@ -1,13 +1,13 @@
-/* ============================================================
-   Cozy Pastel Theme — askfor.support
+/* =====================================================================
+   Cozy Pastel Theme ✦ askfor.support
    Warm, safe, welcoming for LGBTQIA2S+, Healthcare,
    Education, and Technology support.
    Fonts: Baloo 2 (headings) + Nunito (body) via Google Fonts
-   ============================================================ */
+   ===================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap');
 
-/* ── Custom Properties ──────────────────────────────────────────── */
+/* ── Custom Properties ───────────────────────────────────────────────── */
 :root {
   --pink:          #F2B8C6;
   --lavender:      #C9C4E8;
@@ -23,20 +23,20 @@
   --header-bg:     #F2C8D4;
   --footer-bg:     #D8CEF0;
   --border-r:      18px;
-  --shadow-sm:     0 2px 8px rgba(90, 75, 89, 0.10);
+  --shadow-sm:      0 2px 8px rgba(90, 75, 89, 0.10);
   --shadow-md:     0 6px 20px rgba(90, 75, 89, 0.15);
   --shadow-lg:     0 12px 32px rgba(90, 75, 89, 0.20);
   --transition:    0.22s ease;
 }
 
-/* ── Reset ────────────────────────────────────────────────────── */
+/* ── Reset ─────────────────────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ── Body + Background ───────────────────────────────────────────
+/* ── Body + Background ──────────────────────────────────────────────
   Five-stop dusty pastel diagonal gradient: pink → lavender → mint → yellow → green
   Over that, five staggered SVG tile layers with varied heart/star sizes and offsets
   to fake a scattered, non-uniform feel.
@@ -46,7 +46,7 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text);
-  background-color: #E8C4D0;
+  background-color: #E88C4D0;
   background-image:
     /* ── Layer A: large chunky hearts, medium filled stars, 180×180 tile ── */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3C!-- big filled heart --%3E%3Cpath d='M38 58 C38 46 26 40 18 48 C10 56 18 72 38 84 C58 72 66 56 58 48 C50 40 38 46 38 58Z' fill='%23E07898' opacity='0.13'/%3E%3C!-- medium filled star --%3E%3Cpath d='M130 22 L135 37 L151 37 L139 47 L143 62 L130 52 L117 62 L121 47 L109 37 L125 37Z' fill='%23C3B6E0' opacity='0.14'/%3E%3C!-- small chunky heart --%3E%3Cpath d='M155 115 C155 110 149 107 146 110 C143 113 146 120 155 126 C164 120 167 113 164 110 C161 107 155 110 155 115Z' fill='%23E07898' opacity='0.12'/%3E%3C/svg%3E"),
@@ -80,14 +80,14 @@ body {
   min-height: 100vh;
 }
 
-/* ── Container ──────────────────────────────────────────────── */
+/* ── Container ─────────────────────────────────────────────────────── */
 .container {
   max-width: 1040px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ── Typography ─────────────────────────────────────────────── */
+/* ── Typography ─────────────────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Baloo 2', 'Segoe UI', Arial, sans-serif;
   font-weight: 700;
@@ -106,7 +106,7 @@ a:hover, a:focus {
   color: #8a2d50;
 }
 
-/* ── Site Header ─────────────────────────────────────────────── */
+/* ── Site Header ─────────────────────────────────────────────────────── */
 .site-header {
   background: linear-gradient(90deg, var(--header-bg) 0%, #D8C8F0 100%);
   padding: 18px 0 14px;
@@ -135,7 +135,60 @@ a:hover, a:focus {
   color: var(--accent-dark);
 }
 
-/* ── Main Nav ────────────────────────────────────────────────── */
+/* Header inner: title + nav + badge in a row */
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-inner h1 {
+  margin-bottom: 0;
+  flex: 0 0 auto;
+}
+
+.header-inner .main-nav {
+  flex: 1 1 auto;
+}
+
+/* ── MIT License Badge ───────────────────────────────────────────────── */
+.mit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: #6b5d87 !important;
+  background: rgba(201, 196, 232, 0.55);
+  border: 1.5px solid rgba(180, 160, 220, 0.60);
+  border-radius: 999px;
+  padding: 4px 10px;
+  text-decoration: none !important;
+  transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+
+.mit-badge::before {
+  content: "⚖";
+  font-size: 0.75em;
+  opacity: 0.75;
+}
+
+.mit-badge:hover,
+.mit-badge:focus {
+  background: rgba(180, 160, 220, 0.75);
+  box-shadow: 0 2px 8px rgba(160, 130, 200, 0.35);
+  transform: translateY(-1px);
+  color: #4a3a6b !important;
+  outline: none;
+}
+
+/* ── Main Nav ─────────────────────────────────────────────────────────── */
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -170,13 +223,13 @@ a:hover, a:focus {
   outline: none;
 }
 
-/* ── Main Content ────────────────────────────────────────────── */
+/* ── Main Content ─────────────────────────────────────────────────────── */
 main {
   padding: 44px 0 60px;
   min-height: 60vh;
 }
 
-/* ── Hero Section ────────────────────────────────────────────── */
+/* ── Hero Section ─────────────────────────────────────────────────────── */
 .hero {
   text-align: center;
   margin-bottom: 48px;
@@ -202,14 +255,14 @@ main {
   margin: 0 auto;
 }
 
-/* ── Category Cards Grid ─────────────────────────────────────── */
+/* ── Category Cards Grid ───────────────────────────────────────────────── */
 .category-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 22px;
 }
 
-/* ── Card (shared) ───────────────────────────────────────────── */
+/* ── Card (shared) ─────────────────────────────────────────────────────── */
 .card,
 .resource-card {
   background: var(--card-bg);
@@ -246,7 +299,7 @@ main {
   line-height: 1.6;
 }
 
-/* ── Resource List Grid ──────────────────────────────────────── */
+/* ── Resource List Grid ─────────────────────────────────────────────── */
 .resource-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -254,7 +307,7 @@ main {
   margin-top: 32px;
 }
 
-/* ── Resource Card ───────────────────────────────────────────── */
+/* ── Resource Card ─────────────────────────────────────────────────── */
 .resource-card:hover,
 .resource-card:focus {
   transform: translateY(-5px);
@@ -311,7 +364,7 @@ main {
   outline: none;
 }
 
-/* ── Site Footer ─────────────────────────────────────────────── */
+/* ── Site Footer ───────────────────────────────────────────────────────── */
 .site-footer {
   text-align: center;
   padding: 28px 0;
@@ -333,7 +386,7 @@ main {
   color: #8a2d50;
 }
 
-/* ── Accessibility: Focus visible ───────────────────────────── */
+/* ── Accessibility: Focus visible ──────────────────────────────────────── */
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--accent-pink);
@@ -341,7 +394,7 @@ button:focus-visible {
   border-radius: 4px;
 }
 
-/* ── Responsive ──────────────────────────────────────────────── */
+/* ── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .site-header {
     border-radius: 0 0 14px 14px;
@@ -349,6 +402,10 @@ button:focus-visible {
 
   .site-header h1 {
     font-size: 1.3rem;
+  }
+
+  .header-inner {
+    gap: 8px;
   }
 
   .main-nav ul {
