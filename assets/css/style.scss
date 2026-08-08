@@ -8,7 +8,7 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;500;600;700&display=swap');
 
-// ── Colour Palette ──────────────────────────────────────────
+// ── Colour Palette ───────────────────────────────────────────
 $blush-pink:    #FFD1DC;
 $lavender:      #E6E6FA;
 $soft-mint:     #CFFFE5;
@@ -19,7 +19,7 @@ $dark-text:     #5A4B59;
 $white:         #FFFFFF;
 $card-shadow:   rgba(90, 75, 89, 0.12);
 
-// ── Base ────────────────────────────────────────────────────
+// ── Base ─────────────────────────────────────────────────────
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -31,7 +31,7 @@ body {
   font-size: 1rem;
 }
 
-// ── Typography ──────────────────────────────────────────────
+// ── Typography ───────────────────────────────────────────────
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Baloo 2', cursive;
   color: $dark-text;
@@ -41,15 +41,15 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.4rem;
   font-weight: 800;
-  &::before { content: '✨ '; }
-  &::after  { content: ' ✨'; }
+  &::before { content: '♥ '; }
+  &::after  { content: ' ♥'; }
 }
 
 h2 {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  &::before { content: '♥ '; color: $accent-pink; }
+  &::before { content: '★ '; color: $accent-pink; }
   &::after  { content: ' ★'; color: $accent-pink; }
 }
 
@@ -63,7 +63,7 @@ p {
   margin-bottom: 1rem;
 }
 
-// ── Links ───────────────────────────────────────────────────
+// ── Links ────────────────────────────────────────────────────
 a {
   color: $accent-pink;
   font-weight: 600;
@@ -94,14 +94,14 @@ a {
   }
 }
 
-// ── Layout Container ────────────────────────────────────────
+// ── Layout Container ─────────────────────────────────────────
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-// ── Site Header ─────────────────────────────────────────────
+// ── Site Header ──────────────────────────────────────────────
 .site-header {
   background: rgba($white, 0.72);
   backdrop-filter: blur(10px);
@@ -128,7 +128,7 @@ a {
   }
 }
 
-// ── Navigation ──────────────────────────────────────────────
+// ── Navigation ───────────────────────────────────────────────
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -155,13 +155,13 @@ nav {
   }
 }
 
-// ── Main Content ────────────────────────────────────────────
+// ── Main Content ─────────────────────────────────────────────
 main.container {
   padding-top: 2.5rem;
   padding-bottom: 3rem;
 }
 
-// ── Cards ───────────────────────────────────────────────────
+// ── Cards ────────────────────────────────────────────────────
 .card {
   background: rgba($white, 0.85);
   border-radius: 1.25rem;
@@ -177,7 +177,7 @@ main.container {
   }
 }
 
-// ── Buttons ─────────────────────────────────────────────────
+// ── Buttons ──────────────────────────────────────────────────
 .btn, button, input[type="submit"], input[type="button"] {
   display: inline-block;
   font-family: 'Nunito', sans-serif;
@@ -204,7 +204,7 @@ main.container {
   &::after { display: none; }
 }
 
-// ── Cute List (heart bullets) ────────────────────────────────
+// ── Cute List (heart bullets) ─────────────────────────────────
 .cute-list {
   list-style: none;
   padding-left: 0;
@@ -224,7 +224,7 @@ main.container {
   }
 }
 
-// ── Blockquote / Callout ────────────────────────────────────
+// ── Blockquote / Callout ─────────────────────────────────────
 blockquote {
   background: $lavender;
   border-left: 4px solid $accent-pink;
@@ -246,7 +246,7 @@ blockquote {
   &--peach   { background: $soft-peach;    border-color: darken($soft-peach, 15%); }
 }
 
-// ── Resource Grid / Category Cards ──────────────────────────
+// ── Resource Grid / Category Cards ───────────────────────────
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -280,7 +280,7 @@ blockquote {
   }
 }
 
-// ── Category Section Hero ────────────────────────────────────
+// ── Category Section Hero ─────────────────────────────────────
 .category-hero {
   background: rgba($white, 0.7);
   border-radius: 1.5rem;
@@ -297,7 +297,7 @@ blockquote {
   p { font-size: 1.05rem; max-width: 640px; margin: 0.75rem auto 0; }
 }
 
-// ── Footer ──────────────────────────────────────────────────
+// ── Footer ───────────────────────────────────────────────────
 .site-footer {
   background: rgba($white, 0.6);
   border-top: 2px solid $blush-pink;
@@ -308,7 +308,7 @@ blockquote {
   margin-top: 3rem;
 }
 
-// ── Responsive ──────────────────────────────────────────────
+// ── Responsive ───────────────────────────────────────────────
 @media (max-width: 640px) {
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.4rem; }
@@ -321,4 +321,49 @@ blockquote {
   .resource-grid { grid-template-columns: 1fr; }
 
   .category-hero { padding: 1.25rem 1rem; }
+}
+
+// ── Badge Tray ──────────────────────────────────────────────
+.badge-tray {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 999;
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.copyright-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: $dark-text;
+  background: $lavender;
+  border: 1px solid rgba(90, 75, 89, 0.15);
+  border-radius: 999px;
+  padding: 4px 12px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px $card-shadow;
+}
+
+.license-badge {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+
+  img {
+    display: block;
+    border-radius: 999px;
+    height: 20px;
+    width: auto;
+  }
 }
