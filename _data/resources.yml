@@ -1,42 +1,44 @@
 lgbtqia2s:
-  - name: LGBTQIA2S+ Community Center
-    description: A safe space offering support groups, counseling, and community events.
-    phone: "555-0101"
-    address: "101 Pride Blvd, Metropolis"
-    link: "https://example.com/lgbtq-center"
-  - name: Trans Youth Hotline
-    description: 24/7 crisis intervention and suicide prevention for trans youth.
-    phone: "555-0102"
-    link: "https://example.com/trans-youth"
+  - name: The Lesbian, Gay, Bisexual & Transgender Community Center
+    description: "Advocacy, health & wellness programs, arts/cultural events, 12-step recovery support, and family support services for the LGBTQ+ community."
+    address: "208 West 13th Street, New York, NY 10011"
+    link: "https://gaycenter.org"
+  - name: Ali Forney Center
+    description: "Shelter, drop-in services, and case management for LGBTQ+ homeless youth."
+    phone: "(212) 206-0574"
+    address: "307 West 38th Street, 3rd Floor, New York, NY 10018"
+    hours: "Mon-Fri 8am-8pm, Sat-Sun 10am-6pm"
+    link: "https://aliforneycenter.org"
 
 healthcare:
-  - name: General Wellness Clinic
-    description: Affordable primary care, vaccinations, and preventive health screenings.
-    phone: "555-0201"
-    address: "202 Health Way, Metropolis"
-    link: "https://example.com/wellness-clinic"
-  - name: Mental Health Advocates
-    description: Providing accessible therapy and psychiatric support.
-    phone: "555-0202"
-    link: "https://example.com/mental-health"
+  - name: NYC Care
+    description: "Low-cost/no-cost health services for New Yorkers without health insurance, via NYC Health + Hospitals. Choose your own doctor."
+    phone: "1-646-NYC-CARE (1-646-692-2273)"
+    address: "Citywide, via NYC Health + Hospitals"
+    link: "https://nyccare.nyc"
+  - name: "Institute for Family Health - ECHO Free Clinic"
+    description: "Free confidential health care for uninsured adults, open Saturday mornings."
+    phone: "(347) 854-0170"
+    address: "Walton Family Health Center, 1894 Walton Avenue, Bronx, NY 10453"
+    link: "https://institute.org"
 
 education:
-  - name: Adult Literacy Network
-    description: Free classes for adults looking to improve reading and writing skills.
-    phone: "555-0301"
-    address: "303 Knowledge St, Metropolis"
-    link: "https://example.com/literacy"
-  - name: Tech Bootcamps for All
-    description: Scholarships and training programs for underrepresented groups in tech.
-    link: "https://example.com/tech-bootcamps"
+  - name: Brooklyn College Adult Literacy Program (BCALP)
+    description: "Free GED/HSE prep and ESOL classes for NY residents 18+, with case management."
+    address: "Brooklyn College, Brooklyn, NY"
+    link: "https://brooklyn.edu/literacy"
+  - name: CCNY Free GED Preparation Program
+    description: "Free GED/HSE prep classes for NY residents 19+."
+    address: "City College of New York, 160 Convent Avenue, New York, NY 10031"
+    link: "https://ccny.cuny.edu/cps/ged"
 
 technology:
-  - name: Devices for the People
-    description: Refurbished laptops and internet hotspots for low-income households.
-    phone: "555-0401"
-    address: "404 Circuit Dr, Metropolis"
-    link: "https://example.com/devices"
-  - name: Digital Rights Defense
-    description: Legal assistance and advocacy for digital privacy and internet access.
-    phone: "555-0402"
-    link: "https://example.com/digital-rights"
+  - name: NYPL TechConnect
+    description: "Free computer classes, digital literacy, Microsoft Office training, and one-on-one tech help at New York Public Library branches."
+    address: "Multiple branches; flagship: Stavros Niarchos Foundation Library, 455 Fifth Avenue, New York, NY 10016"
+    link: "https://nypl.org/techconnect"
+  - name: NYC Free Computer Centers (NYC Office of Technology and Innovation)
+    description: "Basic computer classes, tech help, job/resume help, device borrowing, and printing at multiple locations citywide."
+    phone: "(212) 714-8400"
+    address: "Multiple locations, e.g. NYPL 53rd Street Library, 18 West 53rd Street, New York, NY 10019"
+    link: "https://nyc.gov/content/oti/pages/free-computer-centers"
