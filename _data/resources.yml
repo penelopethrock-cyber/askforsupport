@@ -21,6 +21,10 @@ healthcare:
     phone: "(347) 854-0170"
     address: "Walton Family Health Center, 1894 Walton Avenue, Bronx, NY 10453"
     link: "https://institute.org"
+  - name: "OPWDD Application & Admission Process Guide"
+    description: "A step-by-step guide to New York State OPWDD eligibility and services for NYC residents — covers the Front Door process, required documents, the 3-step eligibility review, choosing a Care Coordination Organization, Medicaid enrollment, and building a Life Plan. Includes contact info for all 5 borough DDROs."
+    address: "N/A"
+    link: "/assets/docs/opwdd-guide.pdf"
 
 education:
   - name: Brooklyn College Adult Literacy Program (BCALP)
