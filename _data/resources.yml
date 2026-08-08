@@ -31,6 +31,15 @@ education:
     description: "Free GED/HSE prep classes for NY residents 19+."
     address: "City College of New York, 160 Convent Avenue, New York, NY 10031"
     link: "https://ccny.cuny.edu/cps/ged"
+  - name: "ACCES-VR (Adult Career and Continuing Education Services - Vocational Rehabilitation)"
+    description: "A New York State Education Department program that helps people with disabilities achieve and maintain employment and support independent living. A Vocational Rehabilitation Counselor helps develop an individualized plan and can provide services like job training, education support, assistive technology, and job placement. Eligibility-based, not automatic entitlement."
+    phone: "1-800-222-JOBS (5627)"
+    link: "https://www.acces.nysed.gov/vr"
+    apply_link: "https://www.acces.nysed.gov/vr/applying-vocational-rehabilitation-services"
+  - name: Blueprint Supported Education
+    description: "A NYC-based program (via Community Access) providing free, one-on-one support to adults 18+ living in NYC who have a history of mental health conditions and want to pursue high school equivalency, post-secondary degrees, or vocational certification. Focuses on education as a core part of mental health recovery and wellness, includes project-based learning and college/career readiness support."
+    link: "https://www.blueprintsed.org"
+    reference_link: "https://www.communityaccess.org/our-work/supported-education/blueprint-supported-education"
 
 technology:
   - name: NYPL TechConnect
@@ -57,7 +66,7 @@ opwdd:
     description: "A nonprofit CCO providing Health Home care management and MSC for people with I/DD enrolled in OPWDD services across all 5 NYC boroughs. Customer service available 24 hours a day."
     phone: "1-833-692-2269 (24/7 Customer Service)"
     link: "https://acany.org"
-  - name: "OPWDD Front Door â How to Access Services"
+  - name: "OPWDD Front Door – How to Access Services"
     description: "The standard entry process for OPWDD services in NY: (1) Contact the Front Door/OPWDD Infoline or a Care Manager; (2) Complete eligibility determination (documentation of I/DD); (3) Enroll in a Care Coordination Organization; (4) Develop a Life Plan; (5) Access services through your plan."
     phone: "OPWDD Infoline: 1-866-946-9733"
     link: "https://opwdd.ny.gov/get-started/front-door"
