@@ -3,7 +3,7 @@
 
 // ============================================================
 // Soft Pastel Girly Theme — askfor.support
-// ============================================================
+// =============================================================
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;500;600;700&display=swap');
@@ -49,8 +49,8 @@ h2 {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  &::before { content: '★ '; color: $accent-pink; }
-  &::after  { content: ' ★'; color: $accent-pink; }
+  &::before { content: '✅ '; color: $accent-pink; }
+  &::after  { content: ' ✅'; color: $accent-pink; }
 }
 
 h3 {
@@ -224,7 +224,7 @@ main.container {
   }
 }
 
-// ── Blockquote / Callout ─────────────────────────────────────
+// ── Blockquote / Callout ──────────────────────────────────────
 blockquote {
   background: $lavender;
   border-left: 4px solid $accent-pink;
@@ -323,7 +323,7 @@ blockquote {
   .category-hero { padding: 1.25rem 1rem; }
 }
 
-// ── Badge Tray ──────────────────────────────────────────────
+// ── Badge Tray ───────────────────────────────────────────────
 .badge-tray {
   position: fixed;
   bottom: 16px;
@@ -368,34 +368,53 @@ blockquote {
   }
 }
 
-// ── Homepage Blurb Box — wavy pink/fuchsia border ────────────
-// Scalloped/wavy border achieved via an inline SVG border-image.
-// The SVG draws a repeating wavy path in fuchsia (#FF00FF) with
-// a deep-pink (#FF1493) secondary wave, on a transparent field.
+// ── Homepage Blurb Box ─ crayon/hand-drawn dashed pink border ────────────────
+// Uses a ::before SVG pseudo-element with feTurbulence displacement to give
+// dashes a wobbly crayon-scribble texture. border-image is NOT used because it
+// overrides border-radius; this approach keeps rounded corners intact.
 
 .blurb-box {
   position: relative;
-  background: #FFF0F5;                       // soft pastel pink fill
+  background: #FFF0F5;                        // soft pastel pink fill
   border-radius: 1.5rem;
   padding: 1.75rem 2rem;
   margin: 2rem auto;
   max-width: 820px;
   text-align: center;
 
-  // Wavy SVG border-image (scalloped zigzag in fuchsia/deep-pink)
-  border: 18px solid transparent;
-  border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='18'%3E%3Cpath d='M0 9 Q7.5 0 15 9 Q22.5 18 30 9 Q37.5 0 45 9 Q52.5 18 60 9' fill='none' stroke='%23FF00FF' stroke-width='3.5'/%3E%3Cpath d='M0 9 Q7.5 2 15 9 Q22.5 16 30 9 Q37.5 2 45 9 Q52.5 16 60 9' fill='none' stroke='%23FF1493' stroke-width='1.5' opacity='0.55'/%3E%3C/svg%3E");
-  border-image-slice: 18;
-  border-image-width: 18px;
-  border-image-repeat: round;
+  // No border-image (it breaks border-radius). Instead, a ::before pseudo-element
+  // renders an inline SVG that covers the box perimeter. The SVG uses a
+  // dashed rounded-rect path with an feTurbulence + feDisplacementMap filter
+  // to warp the dashes into a wobbly crayon/scribble texture. The viewBox
+  // stretches to fit any box size via preserveAspectRatio="none".
+  border: none;
 
-  // Soft fuchsia glow
+  // Soft pink glow
   box-shadow:
-    0 0 0 2px rgba(255, 0, 255, 0.18),
+    0 0 0 2px rgba(255, 105, 180, 0.22),
     0 6px 24px rgba(255, 20, 147, 0.13),
-    0 2px 10px rgba(255, 182, 193, 0.25);
+    0 2px 10px rgba(255, 182, 193, 0.28);
 
-  // Override the generic section-heading star decorators for a cuter look
+  // Crayon-textured dashed border layer (sits behind content)
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1.5rem;
+    pointer-events: none;
+    z-index: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' preserveAspectRatio='none'%3E %3Cdefs%3E %3Cfilter id='crayon' x='-4%25' y='-10%25' width='108%25' height='120%25'%3E %3CfeTurbulence type='fractalNoise' baseFrequency='0.025 0.04' numOctaves='3' seed='7' result='noise'/%3E %3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='5' xChannelSelector='R' yChannelSelector='G'/%3E %3C/filter%3E %3C/defs%3E %3Crect x='7' y='7' width='986' height='286' rx='26' ry='26' fill='none' stroke='%23FF69B4' stroke-width='5.5' stroke-dasharray='28,16' filter='url(%23crayon)'/%3E %3Crect x='7' y='7' width='986' height='286' rx='26' ry='26' fill='none' stroke='%23FFB6C1' stroke-width='2.5' stroke-dasharray='28,16' stroke-dashoffset='8' opacity='0.55' filter='url(%23crayon)'/%3E %3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  // Ensure content sits above the ::before SVG border layer
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  // Override the generic section-heading star decorators
   .section-heading {
     color: #C2185B;
     &::before { content: '🌸 '; }
