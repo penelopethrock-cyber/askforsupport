@@ -46,36 +46,9 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text);
-  background-color: #E88C4D0;
-  background-image:
-    /* Ã¢ÂÂÃ¢ÂÂ Layer A: large chunky hearts, medium filled stars, 180ÃÂ180 tile Ã¢ÂÂÃ¢ÂÂ */
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3C!-- big filled heart --%3E%3Cpath d='M38 58 C38 46 26 40 18 48 C10 56 18 72 38 84 C58 72 66 56 58 48 C50 40 38 46 38 58Z' fill='%23E07898' opacity='0.13'/%3E%3C!-- medium filled star --%3E%3Cpath d='M130 22 L135 37 L151 37 L139 47 L143 62 L130 52 L117 62 L121 47 L109 37 L125 37Z' fill='%23C3B6E0' opacity='0.14'/%3E%3C!-- small chunky heart --%3E%3Cpath d='M155 115 C155 110 149 107 146 110 C143 113 146 120 155 126 C164 120 167 113 164 110 C161 107 155 110 155 115Z' fill='%23E07898' opacity='0.12'/%3E%3C/svg%3E"),
-    /* Ã¢ÂÂÃ¢ÂÂ Layer B: medium hearts + tiny stars, 130ÃÂ130 tile, offset Ã¢ÂÂÃ¢ÂÂ */
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3C!-- medium filled heart --%3E%3Cpath d='M28 44 C28 37 20 32 14 38 C8 44 14 56 28 65 C42 56 48 44 42 38 C36 32 28 37 28 44Z' fill='%23A8D4B8' opacity='0.15'/%3E%3C!-- small 5pt star --%3E%3Cpath d='M100 18 L103 27 L113 27 L105 33 L108 42 L100 36 L92 42 L95 33 L87 27 L97 27Z' fill='%23E8CF78' opacity='0.16'/%3E%3C!-- tiny heart --%3E%3Cpath d='M60 95 C60 92 56 90 54 92 C52 94 54 99 60 103 C66 99 68 94 66 92 C64 90 60 92 60 95Z' fill='%23DDA0B8' opacity='0.13'/%3E%3C/svg%3E"),
-    /* Ã¢ÂÂÃ¢ÂÂ Layer C: tiny dense hearts, small stars, 90ÃÂ90 tile, rotated feel via offset Ã¢ÂÂÃ¢ÂÂ */
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3C!-- chunky small heart --%3E%3Cpath d='M20 30 C20 25 14 22 10 26 C6 30 10 38 20 44 C30 38 34 30 30 26 C26 22 20 25 20 30Z' fill='%23C3B6E0' opacity='0.14'/%3E%3C!-- tiny 5pt star --%3E%3Cpath d='M68 55 L70 61 L76 61 L71 65 L73 71 L68 67 L63 71 L65 65 L60 61 L66 61Z' fill='%23A8DFC5' opacity='0.16'/%3E%3C/svg%3E"),
-    /* Ã¢ÂÂÃ¢ÂÂ Layer D: big airy star + small heart, 220ÃÂ220 tile, wide spacing Ã¢ÂÂÃ¢ÂÂ */
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3C!-- big 5pt star --%3E%3Cpath d='M110 18 L118 42 L144 42 L123 57 L131 81 L110 66 L89 81 L97 57 L76 42 L102 42Z' fill='%23E8CF78' opacity='0.11'/%3E%3C!-- small heart upper-right --%3E%3Cpath d='M178 50 C178 45 172 42 169 45 C166 48 169 55 178 60 C187 55 190 48 187 45 C184 42 178 45 178 50Z' fill='%23E07898' opacity='0.12'/%3E%3C!-- tiny star lower-left --%3E%3Cpath d='M44 160 L46 167 L53 167 L48 171 L50 178 L44 174 L38 178 L40 171 L35 167 L42 167Z' fill='%23C3B6E0' opacity='0.13'/%3E%3C/svg%3E"),
-    /* Ã¢ÂÂÃ¢ÂÂ Layer E: base diagonal gradient pinkÃ¢ÂÂlavenderÃ¢ÂÂmintÃ¢ÂÂyellowÃ¢ÂÂgreen Ã¢ÂÂÃ¢ÂÂ */
-    linear-gradient(135deg,
-      #F2B8C6 0%,
-      #E0D4F0 22%,
-      #C9C4E8 40%,
-      #A8DFC5 60%,
-      #D6E490 78%,
-      #9ECFAA 100%);
-  background-size:
-    180px 180px,
-    130px 130px,
-    90px  90px,
-    220px 220px,
-    100% 100%;
-  background-position:
-    0 0,
-    65px 45px,
-    30px 20px,
-    110px 80px,
-    0 0;
+  background-image: url('/assets/images/background.jpg');
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
 }

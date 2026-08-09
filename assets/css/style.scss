@@ -25,7 +25,10 @@ $card-shadow:   rgba(90, 75, 89, 0.12);
 body {
   font-family: 'Nunito', sans-serif;
   color: $dark-text;
-  background: linear-gradient(135deg, $blush-pink 0%, $lavender 50%, $soft-mint 100%);
+  background-image: url('/assets/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   min-height: 100vh;
   line-height: 1.7;
   font-size: 1rem;
