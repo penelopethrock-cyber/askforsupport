@@ -34,6 +34,9 @@ lgbtqia2s:
     type: "Self-Defense"
     description: "A queer-focused boxing and fight training community offering classes and a welcoming space for LGBTQ+ people."
     link: "https://www.gayfightclub.com"
+  - name: Spectrum Wrestling
+    type: "Self-Defense"
+    description: "An LGBTQ+-inclusive wrestling club providing training and community in a safe, affirming environment."
 
 healthcare:
   - name: NYC Care
