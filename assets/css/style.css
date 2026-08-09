@@ -1,6 +1,6 @@
 
 /* ======================================================================
-   Cozy Pastel Theme … askfor.support
+   Cozy Pastel Theme â¦ askfor.support
    Warm, safe, welcoming for LGBTQIA2S+, Healthcare,
    Education, and Technology support.
    Fonts: Baloo 2 (headings) + Nunito (body) via Google Fonts
@@ -8,7 +8,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap');
 
-/* ── Custom Properties ──────────────────────────────────────────────────── */
+/* ââ Custom Properties ââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 :root {
   --pink:           #F2B8C6;
   --lavender:       #C9C4E8;
@@ -30,14 +30,14 @@
   --transition:     0.22s ease;
 }
 
-/* ── Reset ────────────────────────────────────────────────────────────────── */
+/* ââ Reset ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ── Body + Background ────────────────────────────────────────────────────
+/* ââ Body + Background ââââââââââââââââââââââââââââââââââââââââââââââââââââ
   background-image: /assets/images/background.jpg (cover, fixed)
 */
 body {
@@ -52,14 +52,14 @@ body {
   min-height: 100vh;
 }
 
-/* ── Container ────────────────────────────────────────────────────────────── */
+/* ââ Container ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 22px;
 }
 
-/* ── Site Header / Navbar ──────────────────────────────────────────────────── */
+/* ââ Site Header / Navbar ââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .site-header {
   background: linear-gradient(90deg, var(--header-bg) 0%, #D8C8F0 100%);
   padding: 18px 0 14px;
@@ -104,7 +104,7 @@ body {
   margin-left: auto;
 }
 
-/* ── Badge Tray ──────────────────────────────────────────────────────────────── */
+/* ââ Badge Tray ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .badge-tray {
   display: flex;
   align-items: center;
@@ -162,7 +162,7 @@ body {
   outline: none;
 }
 
-/* ── Navigation ────────────────────────────────────────────────────────────── */
+/* ââ Navigation ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .main-nav {
   display: flex;
   align-items: center;
@@ -209,7 +209,7 @@ body {
   outline: none;
 }
 
-/* ── Hero ──────────────────────────────────────────────────────────────────── */
+/* ââ Hero ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .hero {
   text-align: center;
   margin-bottom: 48px;
@@ -235,10 +235,12 @@ body {
   margin: 0 auto;
 }
 
-/* ── Blurb Box (pink rounded panel) ──────────────────────────────────────── */
+/* ââ Blurb Box (pink rounded panel) ââââââââââââââââââââââââââââââââââââââââ */
 /* Soft pink background panel with 24px border-radius, pink glow shadow, and  */
 /* a crayon-style wobbly border. Used on the "How This Site Works" section.   */
 .blurb-box {
+  /* Gradient background lives here — no filter/backdrop-filter on this element
+     so the gradient is never rasterized through the displacement map.           */
   background: linear-gradient(90deg, var(--header-bg) 0%, #D8C8F0 100%);
   border-radius: 24px;
   padding: 36px 32px;
@@ -246,12 +248,31 @@ body {
   box-shadow:
     0 0 0 3px rgba(224, 120, 152, 0.45),
     0 8px 28px rgba(224, 120, 152, 0.25);
-  border: 2px solid rgba(224, 120, 152, 0.55);
-  /* Crayon-style wobbly border via SVG displacement filter */
-  filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='3' seed='2'/%3E%3CfeDisplacementMap in='SourceGraphic' scale='2.2' xChannelSelector='R' yChannelSelector='G'/%3E%3C/filter%3E%3C/svg%3E#w");
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  /* No border here — the ::before pseudo-element draws the wobbly crayon border */
+  border: none;
   position: relative;
+  overflow: visible; /* allow ::before inset to paint outside if needed */
+}
+
+/* Crayon-wobble border layer — lives on ::before so the filter operates only on
+   the SVG stroke paths and never rasterizes the gradient background above.      */
+.blurb-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  pointer-events: none;
+  z-index: 0;
+  /* Inline SVG: dashed rounded-rect path, warped by feTurbulence displacement  */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='crayon' x='-4%25' y='-15%25' width='108%25' height='130%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.025 0.04' numOctaves='3' seed='2' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='2.2' xChannelSelector='R' yChannelSelector='G'/%3E%3C/filter%3E%3C/defs%3E%3Crect x='4' y='4' width='992' height='192' rx='22' ry='22' fill='none' stroke='%23E07898' stroke-width='4' stroke-dasharray='28%2C14' filter='url(%23crayon)'/%3E%3Crect x='4' y='4' width='992' height='192' rx='22' ry='22' fill='none' stroke='%23F0B0C0' stroke-width='2' stroke-dasharray='28%2C14' stroke-dashoffset='8' opacity='0.55' filter='url(%23crayon)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Ensure content sits above the ::before border layer */
+.blurb-box > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Ensure .page-header does not override .blurb-box when both classes are present */
@@ -263,14 +284,14 @@ body {
     0 8px 28px rgba(224, 120, 152, 0.25);
 }
 
-/* ── Category Cards Grid ────────────────────────────────────────────────────── */
+/* ââ Category Cards Grid ââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .category-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 22px;
 }
 
-/* ── Card (shared) ──────────────────────────────────────────────────────────── */
+/* ââ Card (shared) ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .card,
 .resource-card {
   background: var(--card-bg);
@@ -306,7 +327,7 @@ body {
   line-height: 1.55;
 }
 
-/* ── Resource List ──────────────────────────────────────────────────────────── */
+/* ââ Resource List ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .resource-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -367,7 +388,7 @@ body {
   outline: none;
 }
 
-/* ── Footer ────────────────────────────────────────────────────────────────── */
+/* ââ Footer ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 .site-footer {
   margin-top: 64px;
   padding: 28px 0 56px;
@@ -391,7 +412,7 @@ body {
   outline: none;
 }
 
-/* ── Responsive ────────────────────────────────────────────────────────────── */
+/* ââ Responsive ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 @media (max-width: 700px) {
   .site-header {
     padding: 12px 0 10px;
