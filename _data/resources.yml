@@ -40,6 +40,10 @@ lgbtqia2s:
   - name: Trans Boxing
     type: "Self-Defense"
     description: "A boxing gym and training program specifically for trans people, offering a supportive and affirming training space."
+  - name: Wickwood Aikikai
+    type: "Self-Defense"
+    description: "An aikido dojo offering LGBTQ+-friendly self-defense training in a welcoming and inclusive environment."
+    link: "https://wickwoodaikikai.com"
 
 healthcare:
   - name: NYC Care
