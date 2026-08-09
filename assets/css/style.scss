@@ -8,7 +8,7 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;500;600;700&display=swap');
 
-// ── Colour Palette ───────────────────────────────────────────
+// —— Colour Palette ———————————————————————————————————————————
 $blush-pink:    #FFD1DC;
 $lavender:      #E6E6FA;
 $soft-mint:     #CFFFE5;
@@ -19,7 +19,7 @@ $dark-text:     #5A4B59;
 $white:         #FFFFFF;
 $card-shadow:   rgba(90, 75, 89, 0.12);
 
-// ── Base ─────────────────────────────────────────────────────
+// —— Base ————————————————————————————————————————————————————
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -34,7 +34,7 @@ body {
   font-size: 1rem;
 }
 
-// ── Typography ───────────────────────────────────────────────
+// —— Typography ————————————————————————————————————————————
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Baloo 2', cursive;
   color: $dark-text;
@@ -66,7 +66,7 @@ p {
   margin-bottom: 1rem;
 }
 
-// ── Links ────────────────────────────────────────────────────
+// —— Links —————————————————————————————————————————————————
 a {
   color: $accent-pink;
   font-weight: 600;
@@ -97,14 +97,14 @@ a {
   }
 }
 
-// ── Layout Container ─────────────────────────────────────────
+// —— Layout Container —————————————————————————————————————
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-// ── Site Header ──────────────────────────────────────────────
+// —— Site Header —————————————————————————————————————————
 .site-header {
   background: rgba($white, 0.72);
   backdrop-filter: blur(10px);
@@ -131,7 +131,7 @@ a {
   }
 }
 
-// ── Navigation ───────────────────────────────────────────────
+// —— Navigation ———————————————————————————————————————————
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -158,13 +158,13 @@ nav {
   }
 }
 
-// ── Main Content ─────────────────────────────────────────────
+// —— Main Content ————————————————————————————————————————
 main.container {
   padding-top: 2.5rem;
   padding-bottom: 3rem;
 }
 
-// ── Cards ────────────────────────────────────────────────────
+// —— Cards —————————————————————————————————————————————
 .card {
   background: rgba($white, 0.85);
   border-radius: 1.25rem;
@@ -180,7 +180,7 @@ main.container {
   }
 }
 
-// ── Buttons ──────────────────────────────────────────────────
+// —— Buttons —————————————————————————————————————————————
 .btn, button, input[type="submit"], input[type="button"] {
   display: inline-block;
   font-family: 'Nunito', sans-serif;
@@ -207,7 +207,7 @@ main.container {
   &::after { display: none; }
 }
 
-// ── Cute List (heart bullets) ─────────────────────────────────
+// —— Cute List (heart bullets) ————————————————————————————
 .cute-list {
   list-style: none;
   padding-left: 0;
@@ -227,7 +227,7 @@ main.container {
   }
 }
 
-// ── Blockquote / Callout ──────────────────────────────────────
+// —— Blockquote / Callout ————————————————————————————————
 blockquote {
   background: $lavender;
   border-left: 4px solid $accent-pink;
@@ -249,7 +249,7 @@ blockquote {
   &--peach   { background: $soft-peach;    border-color: darken($soft-peach, 15%); }
 }
 
-// ── Resource Grid / Category Cards ───────────────────────────
+// —— Resource Grid / Category Cards ——————————————————————
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -283,7 +283,7 @@ blockquote {
   }
 }
 
-// ── Category Section Hero ─────────────────────────────────────
+// —— Category Section Hero ————————————————————————————————
 .category-hero {
   background: rgba($white, 0.7);
   border-radius: 1.5rem;
@@ -300,7 +300,7 @@ blockquote {
   p { font-size: 1.05rem; max-width: 640px; margin: 0.75rem auto 0; }
 }
 
-// ── Footer ───────────────────────────────────────────────────
+// —— Footer ——————————————————————————————————————————————
 .site-footer {
   background: rgba($white, 0.6);
   border-top: 2px solid $blush-pink;
@@ -311,7 +311,7 @@ blockquote {
   margin-top: 3rem;
 }
 
-// ── Responsive ───────────────────────────────────────────────
+// —— Responsive ——————————————————————————————————————————
 @media (max-width: 640px) {
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.4rem; }
@@ -326,7 +326,7 @@ blockquote {
   .category-hero { padding: 1.25rem 1rem; }
 }
 
-// ── Badge Tray ───────────────────────────────────────────────
+// —— Badge Tray ——————————————————————————————————————————
 .badge-tray {
   position: fixed;
   bottom: 16px;
@@ -371,7 +371,7 @@ blockquote {
   }
 }
 
-// ── Homepage Blurb Box ─ crayon/hand-drawn dashed pink border ────────────────
+// —— Homepage Blurb Box — crayon/hand-drawn dashed pink border ————————————————
 // Uses a ::before SVG pseudo-element with feTurbulence displacement to give
 // dashes a wobbly crayon-scribble texture. border-image is NOT used because it
 // overrides border-radius; this approach keeps rounded corners intact.
@@ -431,4 +431,23 @@ blockquote {
     max-width: 700px;
     margin: 0.5rem auto 0;
   }
+}
+
+// —— Subcategory Heading (Social Health grouped sections) ————————————————
+// Used as h2 section dividers inside category pages that group resources by
+// subcategory. Matches the site's h2 type scale ($dark-text, Baloo 2 700)
+// but suppresses the global h2 star decorators so they read as clean section
+// headers rather than page titles.
+.subcategory-heading {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: $dark-text;
+  margin-top: 2.25rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid $blush-pink;
+
+  &::before { content: none; }
+  &::after  { content: none; }
 }
