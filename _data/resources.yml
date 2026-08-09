@@ -30,6 +30,10 @@ lgbtqia2s:
     type: "Self-Defense"
     description: "Self-defense classes designed for women and femmes, focusing on empowerment and practical safety skills."
     link: "https://feministselfdefense.com"
+  - name: Gay Fight Club
+    type: "Self-Defense"
+    description: "A queer-focused boxing and fight training community offering classes and a welcoming space for LGBTQ+ people."
+    link: "https://www.gayfightclub.com"
 
 healthcare:
   - name: NYC Care
