@@ -37,6 +37,9 @@ lgbtqia2s:
   - name: Spectrum Wrestling
     type: "Self-Defense"
     description: "An LGBTQ+-inclusive wrestling club providing training and community in a safe, affirming environment."
+  - name: Trans Boxing
+    type: "Self-Defense"
+    description: "A boxing gym and training program specifically for trans people, offering a supportive and affirming training space."
 
 healthcare:
   - name: NYC Care
