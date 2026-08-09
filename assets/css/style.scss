@@ -367,3 +367,46 @@ blockquote {
     width: auto;
   }
 }
+
+// ── Homepage Blurb Box — wavy pink/fuchsia border ────────────
+// Scalloped/wavy border achieved via an inline SVG border-image.
+// The SVG draws a repeating wavy path in fuchsia (#FF00FF) with
+// a deep-pink (#FF1493) secondary wave, on a transparent field.
+
+.blurb-box {
+  position: relative;
+  background: #FFF0F5;                       // soft pastel pink fill
+  border-radius: 1.5rem;
+  padding: 1.75rem 2rem;
+  margin: 2rem auto;
+  max-width: 820px;
+  text-align: center;
+
+  // Wavy SVG border-image (scalloped zigzag in fuchsia/deep-pink)
+  border: 18px solid transparent;
+  border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='18'%3E%3Cpath d='M0 9 Q7.5 0 15 9 Q22.5 18 30 9 Q37.5 0 45 9 Q52.5 18 60 9' fill='none' stroke='%23FF00FF' stroke-width='3.5'/%3E%3Cpath d='M0 9 Q7.5 2 15 9 Q22.5 16 30 9 Q37.5 2 45 9 Q52.5 16 60 9' fill='none' stroke='%23FF1493' stroke-width='1.5' opacity='0.55'/%3E%3C/svg%3E");
+  border-image-slice: 18;
+  border-image-width: 18px;
+  border-image-repeat: round;
+
+  // Soft fuchsia glow
+  box-shadow:
+    0 0 0 2px rgba(255, 0, 255, 0.18),
+    0 6px 24px rgba(255, 20, 147, 0.13),
+    0 2px 10px rgba(255, 182, 193, 0.25);
+
+  // Override the generic section-heading star decorators for a cuter look
+  .section-heading {
+    color: #C2185B;
+    &::before { content: '🌸 '; }
+    &::after  { content: ' 🌸'; }
+  }
+
+  .section-intro {
+    color: #7B3B6E;
+    font-size: 1.02rem;
+    line-height: 1.75;
+    max-width: 700px;
+    margin: 0.5rem auto 0;
+  }
+}
