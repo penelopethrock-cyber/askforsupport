@@ -53,6 +53,10 @@ lgbtqia2s:
     description: "Brooklyn-based nonprofit offering self-defense, bystander intervention, and violence prevention training for community members."
     address: "327 Baltic Street, Brooklyn, NY 11201"
     link: "https://caeny.org"
+  - name: Muay Sabai
+    type: "Self-Defense"
+    description: "A muay thai gym offering striking and self-defense training in an inclusive community environment."
+    link: "https://www.muaysabai.com"
 
 healthcare:
   - name: NYC Care
