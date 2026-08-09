@@ -1,43 +1,43 @@
 
-/* =====================================================================
+/* ======================================================================
    Cozy Pastel Theme … askfor.support
    Warm, safe, welcoming for LGBTQIA2S+, Healthcare,
    Education, and Technology support.
    Fonts: Baloo 2 (headings) + Nunito (body) via Google Fonts
-   ===================================================================== */
+   ====================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap');
 
-/* ── Custom Properties ──────────────────────────────────────────────── */
+/* ── Custom Properties ──────────────────────────────────────────────────── */
 :root {
-  --pink:          #F2B8C6;
-  --lavender:      #C9C4E8;
-  --mint:          #A8DFC5;
-  --yellow:        #E8D88A;
-  --green:         #9ECFAA;
-  --peach:         #F0C4A0;
+  --pink:           #F2B8C6;
+  --lavender:       #C9C4E8;
+  --mint:           #A8DFC5;
+  --yellow:         #E8D88A;
+  --green:          #9ECFAA;
+  --peach:          #F0C4A0;
   --accent-pink:   #E07898;
   --accent-dark:   #b84d6a;
-  --text:          #5A4B59;
+  --text:           #5A4B59;
   --text-light:    #7a6679;
-  --card-bg:       #ffffff;
-  --header-bg:     #F2C8D4;
-  --footer-bg:     #D8CEF0;
-  --border-r:      18px;
-  --shadow-sm:      0 2px 8px rgba(90, 75, 89, 0.10);
-  --shadow-md:     0 6px 20px rgba(90, 75, 89, 0.15);
-  --shadow-lg:     0 12px 32px rgba(90, 75, 89, 0.20);
-  --transition:    0.22s ease;
+  --card-bg:        #ffffff;
+  --header-bg:      #F2C8D4;
+  --footer-bg:      #D8CEF0;
+  --border-r:       18px;
+  --shadow-sm:       0 2px 8px rgba(90, 75, 89, 0.10);
+  --shadow-md:       0 6px 20px rgba(90, 75, 89, 0.15);
+  --shadow-lg:       0 12px 32px rgba(90, 75, 89, 0.20);
+  --transition:     0.22s ease;
 }
 
-/* ── Reset ────────────────────────────────────────────────────────── */
+/* ── Reset ────────────────────────────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ── Body + Background ────────────────────────────────────────────────
+/* ── Body + Background ────────────────────────────────────────────────────
   background-image: /assets/images/background.jpg (cover, fixed)
 */
 body {
@@ -52,14 +52,14 @@ body {
   min-height: 100vh;
 }
 
-/* ── Container ────────────────────────────────────────────────────── */
+/* ── Container ────────────────────────────────────────────────────────────── */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 22px;
 }
 
-/* ── Site Header / Navbar ─────────────────────────────────────────── */
+/* ── Site Header / Navbar ──────────────────────────────────────────────────── */
 .site-header {
   background: linear-gradient(90deg, var(--header-bg) 0%, #D8C8F0 100%);
   padding: 18px 0 14px;
@@ -104,7 +104,7 @@ body {
   margin-left: auto;
 }
 
-/* ── Badge Tray ────────────────────────────────────────────────────── */
+/* ── Badge Tray ──────────────────────────────────────────────────────────────── */
 .badge-tray {
   display: flex;
   align-items: center;
@@ -162,7 +162,7 @@ body {
   outline: none;
 }
 
-/* ── Navigation ────────────────────────────────────────────────────── */
+/* ── Navigation ────────────────────────────────────────────────────────────── */
 .main-nav {
   display: flex;
   align-items: center;
@@ -209,7 +209,7 @@ body {
   outline: none;
 }
 
-/* ── Hero ───────────────────────────────────────────────────────────── */
+/* ── Hero ──────────────────────────────────────────────────────────────────── */
 .hero {
   text-align: center;
   margin-bottom: 48px;
@@ -239,7 +239,7 @@ body {
 /* Soft pink background panel with 24px border-radius, pink glow shadow, and  */
 /* a crayon-style wobbly border. Used on the "How This Site Works" section.   */
 .blurb-box {
-  background: rgba(242, 184, 198, 0.60);
+  background: linear-gradient(90deg, var(--header-bg) 0%, #D8C8F0 100%);
   border-radius: 24px;
   padding: 36px 32px;
   margin-bottom: 40px;
@@ -256,21 +256,21 @@ body {
 
 /* Ensure .page-header does not override .blurb-box when both classes are present */
 .page-header.blurb-box {
-  background: rgba(242, 184, 198, 0.60);
+  background: linear-gradient(90deg, var(--header-bg) 0%, #D8C8F0 100%);
   border-radius: 24px;
   box-shadow:
     0 0 0 3px rgba(224, 120, 152, 0.45),
     0 8px 28px rgba(224, 120, 152, 0.25);
 }
 
-/* ── Category Cards Grid ────────────────────────────────────────────── */
+/* ── Category Cards Grid ────────────────────────────────────────────────────── */
 .category-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 22px;
 }
 
-/* ── Card (shared) ──────────────────────────────────────────────────── */
+/* ── Card (shared) ──────────────────────────────────────────────────────────── */
 .card,
 .resource-card {
   background: var(--card-bg);
@@ -306,7 +306,7 @@ body {
   line-height: 1.55;
 }
 
-/* ── Resource List ───────────────────────────────────────────────────── */
+/* ── Resource List ──────────────────────────────────────────────────────────── */
 .resource-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -367,7 +367,7 @@ body {
   outline: none;
 }
 
-/* ── Footer ─────────────────────────────────────────────────────────── */
+/* ── Footer ────────────────────────────────────────────────────────────────── */
 .site-footer {
   margin-top: 64px;
   padding: 28px 0 56px;
@@ -391,7 +391,7 @@ body {
   outline: none;
 }
 
-/* ── Responsive ─────────────────────────────────────────────────────── */
+/* ── Responsive ────────────────────────────────────────────────────────────── */
 @media (max-width: 700px) {
   .site-header {
     padding: 12px 0 10px;
