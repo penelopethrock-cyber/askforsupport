@@ -48,6 +48,11 @@ lgbtqia2s:
     type: "Self-Defense"
     description: "A goju-ryu karate dojo in Brooklyn offering self-defense training in a community-focused environment."
     link: "https://brooklyngoju.com"
+  - name: Center for Anti-Violence Education (CAE)
+    type: "Self-Defense"
+    description: "Brooklyn-based nonprofit offering self-defense, bystander intervention, and violence prevention training for community members."
+    address: "327 Baltic Street, Brooklyn, NY 11201"
+    link: "https://caeny.org"
 
 healthcare:
   - name: NYC Care
