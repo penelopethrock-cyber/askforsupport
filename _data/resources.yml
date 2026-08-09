@@ -44,6 +44,10 @@ lgbtqia2s:
     type: "Self-Defense"
     description: "An aikido dojo offering LGBTQ+-friendly self-defense training in a welcoming and inclusive environment."
     link: "https://wickwoodaikikai.com"
+  - name: Brooklyn Goju
+    type: "Self-Defense"
+    description: "A goju-ryu karate dojo in Brooklyn offering self-defense training in a community-focused environment."
+    link: "https://brooklyngoju.com"
 
 healthcare:
   - name: NYC Care
