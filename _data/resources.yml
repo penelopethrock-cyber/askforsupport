@@ -26,6 +26,10 @@ lgbtqia2s:
     address: "Multiple centers in Manhattan, Bronx, Brooklyn"
     phone: "877-360-5428"
     link: "https://www.sageusa.org"
+  - name: Feminist Self-Defense
+    type: "Self-Defense"
+    description: "Self-defense classes designed for women and femmes, focusing on empowerment and practical safety skills."
+    link: "https://feministselfdefense.com"
 
 healthcare:
   - name: NYC Care
