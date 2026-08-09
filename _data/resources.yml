@@ -73,7 +73,7 @@ education:
     type: "Career Training"
     description: "Free vocational training (medical, office, security), GED/HSE prep, and college prep for eligible adults."
     address: "111 Livingston Street, Brooklyn, NY 11201"
-    link: "https://www.sunybeoc.org"
+    link: "https://www.sunybeoс.org"
   - name: WE NYC (Women Entrepreneurs NYC)
     type: "Entrepreneurship"
     description: "Free business training, mentorship, and networking for women entrepreneurs in NYC."
@@ -90,6 +90,24 @@ technology:
     description: "Basic computer classes, tech help, job/resume help, device borrowing, and printing at multiple locations citywide."
     phone: "212-714-8400"
     link: "https://www.nyc.gov/site/oti/residents/computer-centers.page"
+  - name: CryptoParty
+    type: "Digital Security Workshop"
+    description: "Free, volunteer-run workshops teaching practical tools for online privacy and security, such as encryption, password managers, and safe browsing habits."
+    link: "https://www.cryptoparty.in"
+  - name: CyPurr Collective
+    type: "Digital Security Workshop"
+    description: "A Brooklyn-based collective offering free digital security and privacy workshops (cryptoparties) to help community members protect themselves online."
+    address: "Brooklyn, NY"
+    link: "https://cypurr.nyc"
+  - name: NYC CryptoParty
+    type: "Digital Security Workshop"
+    description: "Local NYC chapter of the global CryptoParty movement, hosting free hands-on sessions on encryption, privacy tools, and safe digital practices."
+    link: "https://www.cryptoparty.in/nyc"
+  - name: Tech Learning Collective
+    type: "Digital Security Training"
+    description: "A worker-owned NYC cooperative offering hands-on courses in digital security, privacy, and networking, including community-oriented and sliding-scale options."
+    address: "New York, NY"
+    link: "https://www.techlearningcollective.com"
 
 housing:
   - name: NYC Housing Connect
