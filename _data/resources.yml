@@ -40,10 +40,10 @@ lgbtqia2s:
   - name: Trans Boxing
     type: "Self-Defense"
     description: "A boxing gym and training program specifically for trans people, offering a supportive and affirming training space."
-  - name: Wickwood Aikikai
+  - name: Wickwood Aikikia
     type: "Self-Defense"
     description: "An aikido dojo offering LGBTQ+-friendly self-defense training in a welcoming and inclusive environment."
-    link: "https://wickwoodaikikai.com"
+    link: "https://wickwoodaikikia.com"
   - name: Brooklyn Goju
     type: "Self-Defense"
     description: "A goju-ryu karate dojo in Brooklyn offering self-defense training in a community-focused environment."
@@ -181,3 +181,5 @@ opwdd:
     address: "25 Hyatt Street, Staten Island, NY 10301 (multiple NYC offices)"
     phone: "833-692-2269"
     link: "https://acany.org"
+
+social_health: []
