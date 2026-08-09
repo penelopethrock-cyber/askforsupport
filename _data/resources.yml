@@ -26,6 +26,40 @@ lgbtqia2s:
     address: "Multiple centers in Manhattan, Bronx, Brooklyn"
     phone: "877-360-5428"
     link: "https://www.sageusa.org"
+  - name: Feminist Self-Defense
+    type: "Self-Defense Workshops"
+    description: "Self-defense workshops with finance options available for those who need them."
+    link: "http://www.feministselfdefense.com/"
+  - name: Gay Fight Club
+    type: "Queer & Trans Muay Thai"
+    description: "Offering queer/trans Muay Thai classes at Red Planet Muay Thai every week on Tuesdays, Thursdays, and Saturdays in Bed-Stuy."
+    address: "Bed-Stuy, Brooklyn, NY"
+  - name: Spectrum Wrestling
+    type: "Queer+ BJJ"
+    description: "Queer+ BJJ (Brazilian Jiu-Jitsu) group, offering free intro classes every Monday."
+  - name: Trans Boxing
+    type: "Boxing"
+    description: "Boxing classes and resources for Trans and non-binary folks."
+    link: "https://www.transboxing.org/"
+  - name: Wickwood Aikikai
+    type: "Aikido"
+    description: "Aikido classes in Ridgewood, Queens."
+    address: "Ridgewood, Queens, NY"
+    link: "https://www.facebook.com/aikidoofwickwood/"
+  - name: Brooklyn Goju
+    type: "Martial Arts"
+    description: "\"Martial Arts for Peace, Strength and Justice\" in Park Slope. Trans & cis women, non-binary folks, gender-nonconforming people, and/or trans men are encouraged to train in a safe and inclusive space."
+    address: "Park Slope, Brooklyn, NY"
+    link: "https://brooklyngoju.com/"
+  - name: Center for Anti-Violence Education
+    type: "Self-Defense & De-escalation"
+    description: "Self-defense and de-escalation classes for Femme, Queer and/or Trans folks."
+    link: "https://caeny.org/"
+  - name: Muay Sabai
+    type: "Muay Thai & BJJ"
+    description: "Midtown Muay Thai/BJJ gym with a queer-friendly community."
+    address: "Midtown, New York, NY"
+    link: "https://muaysabaicamp.com/"
 
 healthcare:
   - name: NYC Care
@@ -73,7 +107,7 @@ education:
     type: "Career Training"
     description: "Free vocational training (medical, office, security), GED/HSE prep, and college prep for eligible adults."
     address: "111 Livingston Street, Brooklyn, NY 11201"
-    link: "https://www.sunybeoс.org"
+    link: "https://www.sunybeоо.org"
   - name: WE NYC (Women Entrepreneurs NYC)
     type: "Entrepreneurship"
     description: "Free business training, mentorship, and networking for women entrepreneurs in NYC."
