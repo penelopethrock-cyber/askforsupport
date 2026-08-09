@@ -1,25 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!-- Body (Mint Green) -->
-  <path id="mascotBody" d="M 40 145 C 40 85, 80 60, 100 60 C 120 60, 160 85, 160 145 C 160 175, 130 185, 100 185 C 70 185, 40 175, 40 145 Z" fill="#61D5A8" stroke="#212F3D" stroke-width="6" stroke-linejoin="round" />
-  <path d="M 43 146 Q 100 165 157 146 C 157 172, 130 182, 100 182 C 70 182, 43 172, 43 146 Z" fill="#3AA87E" />
-  <ellipse cx="65" cy="85" rx="12" ry="22" transform="rotate(-30 65 85)" fill="#FFFFFF" opacity="0.6" />
-  <ellipse cx="145" cy="120" rx="6" ry="15" transform="rotate(20 145 120)" fill="#FFFFFF" opacity="0.4" />
-  <circle cx="55" cy="142" r="8" fill="#FF8A8A" opacity="0.6" />
-  <circle cx="145" cy="142" r="8" fill="#FF8A8A" opacity="0.6" />
-  <circle cx="75" cy="130" r="9" fill="#212F3D" />
-  <circle cx="125" cy="130" r="9" fill="#212F3D" />
-  <circle cx="72" cy="127" r="3" fill="#FFFFFF" />
-  <circle cx="122" cy="127" r="3" fill="#FFFFFF" />
-  <circle cx="76" cy="132" r="1.5" fill="#FFFFFF" />
-  <circle cx="126" cy="132" r="1.5" fill="#FFFFFF" />
-  <path d="M 92 138 Q 100 146 108 138" fill="none" stroke="#212F3D" stroke-width="3" stroke-linecap="round" />
-  <g transform="rotate(-15 100 28)">
-    <path d="M 100 28 C 80 16, 60 22, 60 28 C 60 34, 80 40, 100 28 Z" fill="#E74C3C" stroke="#212F3D" stroke-width="4" stroke-linejoin="round" />
-    <path d="M 100 28 C 120 16, 140 22, 140 28 C 140 34, 120 40, 100 28 Z" fill="#3498DB" stroke="#212F3D" stroke-width="4" stroke-linejoin="round" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" width="320" height="280">
+
+  <!-- Speech bubble -->
+  <path d="M 160 18 Q 160 8 170 8 L 295 8 Q 305 8 305 18 L 305 58 Q 305 68 295 68 L 205 68 L 195 82 L 190 68 L 170 68 Q 160 68 160 58 Z"
+        fill="#FFFFFF" stroke="#4A9ECC" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="232" y="31" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" font-weight="600" fill="#2C5F8A">Welcome,</text>
+  <text x="232" y="46" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" fill="#2C5F8A">I'm happy</text>
+  <text x="232" y="61" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5" fill="#2C5F8A">you're here!</text>
+
+  <!-- Puffy pale blue cloud (multiple overlapping ellipses) -->
+  <ellipse cx="130" cy="245" rx="90" ry="28" fill="#C8E8F8"/>
+  <ellipse cx="80" cy="238" rx="42" ry="26" fill="#D4EDFB"/>
+  <ellipse cx="108" cy="228" rx="38" ry="28" fill="#D4EDFB"/>
+  <ellipse cx="148" cy="228" rx="40" ry="30" fill="#D4EDFB"/>
+  <ellipse cx="182" cy="235" rx="38" ry="26" fill="#C8E8F8"/>
+  <ellipse cx="130" cy="248" rx="88" ry="22" fill="#C8E8F8"/>
+  <!-- Cloud highlight -->
+  <ellipse cx="100" cy="225" rx="20" ry="10" fill="#E8F5FD" opacity="0.7"/>
+
+  <!-- Jelly blob body (sitting on cloud) -->
+  <path d="M 78 228 C 78 178, 95 148, 130 148 C 165 148, 182 178, 182 228 Q 156 240 130 238 Q 104 240 78 228 Z"
+        fill="#A8E6CF" stroke="#2E8B57" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Blob shadow/depth bottom -->
+  <path d="M 82 222 Q 130 236 178 222 C 178 235, 156 242, 130 240 C 104 242, 82 235, 82 222 Z"
+        fill="#7DD4B0" opacity="0.6"/>
+  <!-- Blob highlight (sheen) -->
+  <ellipse cx="108" cy="168" rx="14" ry="24" transform="rotate(-25 108 168)" fill="#FFFFFF" opacity="0.45"/>
+  <ellipse cx="155" cy="190" rx="7" ry="16" transform="rotate(15 155 190)" fill="#FFFFFF" opacity="0.28"/>
+
+  <!-- Eyes -->
+  <circle cx="116" cy="200" r="11" fill="#2C3E50"/>
+  <circle cx="144" cy="200" r="11" fill="#2C3E50"/>
+  <!-- Eye shine -->
+  <circle cx="112" cy="196" r="3.5" fill="#FFFFFF"/>
+  <circle cx="140" cy="196" r="3.5" fill="#FFFFFF"/>
+  <circle cx="114" cy="198" r="1.5" fill="#FFFFFF"/>
+  <circle cx="142" cy="198" r="1.5" fill="#FFFFFF"/>
+
+  <!-- Rosy cheeks -->
+  <ellipse cx="104" cy="212" rx="10" ry="6" fill="#FFB3BA" opacity="0.65"/>
+  <ellipse cx="156" cy="212" rx="10" ry="6" fill="#FFB3BA" opacity="0.65"/>
+
+  <!-- Smile -->
+  <path d="M 120 218 Q 130 226 140 218" fill="none" stroke="#2C3E50" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Propeller hat brim -->
+  <path d="M 108 155 Q 130 148 152 155 Q 130 162 108 155 Z"
+        fill="#F4D03F" stroke="#2C3E50" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Hat dome -->
+  <path d="M 111 155 C 111 138, 149 138, 149 155 Q 130 160 111 155 Z"
+        fill="#3498DB" stroke="#2C3E50" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Propeller stem -->
+  <line x1="130" y1="155" x2="130" y2="138" stroke="#2C3E50" stroke-width="3" stroke-linecap="round"/>
+  <!-- Propeller blades (rotated group) -->
+  <g transform="rotate(-15 130 138)">
+    <path d="M 130 138 C 110 128, 94 132, 94 138 C 94 144, 110 148, 130 138 Z"
+          fill="#E74C3C" stroke="#2C3E50" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M 130 138 C 150 128, 166 132, 166 138 C 166 144, 150 148, 130 138 Z"
+          fill="#3498DB" stroke="#2C3E50" stroke-width="3" stroke-linejoin="round"/>
   </g>
-  <line x1="100" y1="52" x2="100" y2="28" stroke="#212F3D" stroke-width="4" stroke-linecap="round" />
-  <path d="M 78 61 C 78 40, 122 40, 122 61 Q 100 68 78 61 Z" fill="#F4D03F" stroke="#212F3D" stroke-width="4" stroke-linejoin="round" />
-  <path d="M 70 61 Q 100 75 130 61 Q 100 66 70 61 Z" fill="#3498DB" stroke="#212F3D" stroke-width="4" stroke-linejoin="round" />
-  <path d="M 85 55 C 85 45, 95 45, 100 45" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.6" />
-  <circle cx="100" cy="28" r="5" fill="#E67E22" stroke="#212F3D" stroke-width="3" />
+  <!-- Propeller hub -->
+  <circle cx="130" cy="138" r="5.5" fill="#E67E22" stroke="#2C3E50" stroke-width="2.5"/>
+
 </svg>
