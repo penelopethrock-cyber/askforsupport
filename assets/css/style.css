@@ -168,6 +168,41 @@ body {
   gap: 8px;
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 34px;
+  height: 34px;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.60);
+  border: 1.5px solid rgba(201, 196, 232, 0.50);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.nav-toggle.is-active .nav-toggle-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle.is-active .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.is-active .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
 .nav-mascot {
   width: 36px;
   height: 36px;
@@ -413,41 +448,39 @@ body {
 
 /* ââ Responsive ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 @media (max-width: 700px) {
-  .site-header {
-    padding: 12px 0 10px;
+  .site-header { padding: 12px 0 10px; }
+  .site-header h1 { font-size: 1.1rem; }
+  .header-inner { flex-direction: column; align-items: flex-start; }
+
+  .main-nav {
+    width: 100%;
+    justify-content: space-between;
   }
 
-  .site-header h1 {
-    font-size: 1.1rem;
+  .header-inner .main-nav {
+    margin-left: 0;
   }
 
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
+  .nav-toggle {
+    display: flex;
   }
 
-  .main-nav ul {
+  .main-nav ul#primary-nav-list {
+    display: none;
     flex-direction: column;
     gap: 4px;
+    width: 100%;
+    margin-top: 10px;
   }
 
-  .main-nav a {
-    font-size: 0.82rem;
-    padding: 4px 11px;
+  .main-nav ul#primary-nav-list.is-open {
+    display: flex;
   }
 
-  .hero {
-    padding: 28px 16px 24px;
-  }
-
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-
-  .category-cards,
-  .resource-list {
-    grid-template-columns: 1fr;
-  }
+  .main-nav a { font-size: 0.82rem; padding: 4px 11px; }
+  .hero { padding: 28px 16px 24px; }
+  .hero h2 { font-size: 1.5rem; }
+  .category-cards, .resource-list { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
