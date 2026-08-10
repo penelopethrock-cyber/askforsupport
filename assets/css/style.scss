@@ -131,33 +131,6 @@ a {
   }
 }
 
-// ââ Navigation âââââââââââââââââââââââââââââââââââââââââââ
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-
-  a {
-    background: $blush-pink;
-    color: $dark-text;
-    padding: 0.3rem 0.85rem;
-    border-radius: 999px;
-    font-size: 0.88rem;
-    font-weight: 600;
-    transition: background 0.2s, transform 0.15s;
-    white-space: nowrap;
-
-    &::after { display: none; }
-
-    &:hover {
-      background: $accent-pink;
-      color: $white;
-      transform: scale(1.05);
-      text-decoration: none;
-    }
-  }
-}
-
 // ââ Main Content ââââââââââââââââââââââââââââââââââââââââ
 main.container {
   padding-top: 2.5rem;
