@@ -57,6 +57,59 @@ lgbtqia2s:
     type: "Self-Defense"
     description: "A muay thai gym offering striking and self-defense training in an inclusive community environment."
     link: "https://www.muaysabai.com"
+  - name: Support and Services for Trans and Nonbinary People in New York (LawHelpNY Guide)
+    type: "Relocation & Resource Guide"
+    description: "A guide for transgender, gender nonconforming, and nonbinary people who are new to New York, with contact info for community centers, health clinics, legal aid organizations, and support groups statewide, plus special sections for youth, elders, disabled people, immigrants, and sex workers."
+    link: "https://www.lawhelpny.org/resource/support-and-services-for-trans-and-nonbinary-people-in-new-york"
+  - name: Mount Sinai Institute for Advanced Medicine
+    type: "Trans Healthcare"
+    description: "Comprehensive Health Program offering gender-affirming and transgender medical care alongside HIV specialty and primary care services."
+    address: "275 7th Avenue, 12th Floor, New York, NY 10001"
+    phone: "212-604-1701"
+    link: "https://www.mountsinai.org/locations/institute-advanced-medicine"
+  - name: Harlem United
+    type: "Community Health Center"
+    description: "Community-based health and human services organization offering primary care, dental, counseling, sexual health services, substance use/recovery support, and housing/nutrition programs, with LGBTQ+-affirming care."
+    address: "306 Malcolm X Blvd, New York, NY 10027"
+    phone: "212-849-2780"
+    link: "https://www.harlemunited.org"
+  - name: GMHC (Gay Men's Health Crisis)
+    type: "HIV/AIDS Services"
+    description: "Status-neutral HIV/AIDS services organization offering testing, prevention, mental and behavioral health, substance use services, and dedicated programs for transgender, gender non-conforming, and non-binary people, plus youth and older adults."
+    address: "307 West 38th Street, New York, NY 10018"
+    phone: "212-367-1000"
+    link: "https://gmhc.org"
+  - name: Ali Forney Center
+    type: "Youth & Housing"
+    description: "Dedicated to protecting LGBTQ+ youth (ages 16-24) from homelessness. Providing drop-in services, meals, and emergency housing."
+    address: "24-Hour Drop-In: 321 W 125th St, New York, NY 10027"
+    phone: "212-206-0574"
+    link: "https://www.aliforneycenter.org"
+  - name: Breaking Ground
+    type: "Housing Services"
+    description: "Nonprofit developing and operating supportive and affordable housing for homeless and vulnerable New Yorkers, including people living with HIV/AIDS, mental illness, or physical disabilities."
+    address: "505 8th Avenue, 5th Floor, New York, NY 10018"
+    phone: "212-389-9300"
+    link: "https://www.breakingground.org"
+  - name: NYU LGBTQ+ Center
+    type: "Community Center"
+    description: "Welcoming space for NYU students, faculty, staff, and alums to explore LGBTQ+ community, with lounge space, a lending library, safer-sex supplies, and educational programs and events."
+    address: "Kimmel Center for University Life, 60 Washington Square South, Suite 602, New York, NY 10012"
+    phone: "212-998-4424"
+    link: "https://www.nyu.edu/life/community-flourishing/centers-and-communities/lgbtq-center.html"
+  - name: Callen-Lorde Community Health Center
+    type: "LGBTQ+ Health Center"
+    description: "Provides medical, dental, and behavioral health care to New York's LGBTQ+ community regardless of ability to pay, with locations in Manhattan, Brooklyn, and the Bronx offering primary care, transgender health, HIV treatment/prevention, and more."
+    address: "356 West 18th Street, New York, NY 10011 (Chelsea); also Brooklyn and Bronx locations"
+    phone: "212-271-7200"
+    link: "https://callen-lorde.org"
+  - name: NYC Health + Hospitals Pride Center
+    type: "Healthcare Provider"
+    description: "LGBTQ+ affirming health services at Metropolitan Hospital."
+    address: "1901 1st Ave, Manhattan, NY 10029"
+    phone: "212-423-7292"
+    hours: "Mon-Fri 8:30am-4:30pm"
+    link: "https://www.nychealthandhospitals.org"
 
 healthcare:
   - name: NYC Care
@@ -104,7 +157,7 @@ education:
     type: "Career Training"
     description: "Free vocational training (medical, office, security), GED/HSE prep, and college prep for eligible adults."
     address: "111 Livingston Street, Brooklyn, NY 11201"
-    link: "https://www.sunybeoс.org"
+    link: "https://www.sunybeñ.org"
   - name: WE NYC (Women Entrepreneurs NYC)
     type: "Entrepreneurship"
     description: "Free business training, mentorship, and networking for women entrepreneurs in NYC."
@@ -135,6 +188,78 @@ technology:
     description: "A worker-owned NYC cooperative offering hands-on courses in digital security, privacy, and networking, including community-oriented and sliding-scale options."
     address: "New York, NY"
     link: "https://www.techlearningcollective.com"
+  - name: F-Droid
+    type: "App Store"
+    description: "Free and open-source app store for Android, hosting only free/open-source apps and flagging trackers, ads, or proprietary dependencies so you know exactly what you're installing."
+    link: "https://f-droid.org"
+  - name: Briar
+    type: "Secure Messaging"
+    description: "Encrypted messaging app that syncs directly between devices with no central server, works over Bluetooth, Wi-Fi, or Tor, and keeps working even without internet access."
+    link: "https://briarproject.org"
+  - name: IPFS (InterPlanetary File System)
+    type: "Decentralized Storage"
+    description: "Open-source protocol for content-addressed, peer-to-peer file storage and sharing, building a more resilient and censorship-resistant web."
+    link: "https://ipfs.tech"
+  - name: Nostr
+    type: "Decentralized Protocol"
+    description: "Open, censorship-resistant protocol for social networking where no single company or server controls your identity, followers, or content."
+    link: "https://nostr.org"
+  - name: Tor Browser
+    type: "Privacy Browser"
+    description: "Free browser from the nonprofit Tor Project that protects against tracking, surveillance, and censorship by routing your traffic through multiple encrypted relays."
+    link: "https://www.torproject.org"
+  - name: Homebrew
+    type: "Package Manager (macOS)"
+    description: "The most popular free, open-source package manager for macOS, letting you install and manage command-line tools and apps from the Terminal."
+    link: "https://brew.sh"
+  - name: Scoop
+    type: "Package Manager (Windows)"
+    description: "Free command-line installer for Windows that installs apps into your user folder without needing admin permissions."
+    link: "https://scoop.sh"
+  - name: Windows Subsystem for Linux (WSL)
+    type: "Dev Tool"
+    description: "Free, open-source Microsoft feature that lets you run a real Linux environment directly on Windows, no virtual machine or dual-boot required."
+    link: "https://learn.microsoft.com/en-us/windows/wsl/about"
+  - name: Chocolatey
+    type: "Package Manager (Windows)"
+    description: "Free, open-source command-line package manager for Windows that automates software installs, updates, and uninstalls."
+    link: "https://chocolatey.org"
+  - name: Open-Shell
+    type: "Windows Customization"
+    description: "Free, open-source tool that restores a classic-style Start menu and other familiar Windows features on Windows 7 through 11."
+    link: "https://github.com/Open-Shell/Open-Shell-Menu"
+  - name: Microsoft PowerToys
+    type: "Windows Utilities"
+    description: "Official free, open-source set of utilities from Microsoft for power users, including window management, batch file renaming, keyboard remapping, and more."
+    link: "https://learn.microsoft.com/en-us/windows/powertoys"
+  - name: Chris Titus Tech's WinUtil
+    type: "Windows Utility"
+    description: "Free, open-source PowerShell utility that streamlines installing apps, debloating Windows, applying tweaks, and fixing update issues from one tool."
+    link: "https://github.com/ChrisTitusTech/winutil"
+  - name: UniGetUI
+    type: "Package Manager GUI"
+    description: "Free, open-source graphical interface (formerly WingetUI) that unifies Winget, Scoop, Chocolatey, and other package managers into one easy app for installing and updating software on Windows."
+    link: "https://github.com/Devolutions/UniGetUI"
+  - name: Waterfox
+    type: "Privacy Browser"
+    description: "Free, open-source web browser forked from Firefox, built for speed and privacy while keeping support for legacy extensions."
+    link: "https://www.waterfox.com"
+  - name: LibreWolf
+    type: "Privacy Browser"
+    description: "Free, open-source Firefox fork focused on privacy and security, stripping out telemetry and data collection by default."
+    link: "https://librewolf.net"
+  - name: Brave Browser
+    type: "Privacy Browser"
+    description: "Free, Chromium-based browser with built-in ad and tracker blocking, aimed at faster and more private browsing by default."
+    link: "https://brave.com"
+  - name: Chromium
+    type: "Open-Source Browser"
+    description: "The free, open-source browser project from Google that Chrome and several other browsers are built on, available for developers and privacy-minded users who want the base browser without Google's added services."
+    link: "https://www.chromium.org"
+  - name: NY Courts Uncontested Divorce DIY Program
+    type: "Legal Self-Help"
+    description: "Official, free New York State Courts program (via LawHelp Interactive) that walks you through generating your own uncontested divorce paperwork online, no lawyer required if you meet the eligibility requirements (married 6+ months separated, no kids under 21, no contested property)."
+    link: "https://www.nycourts.gov/help/diy-forms/uncontested-divorce-program"
 
 housing:
   - name: NYC Housing Connect
