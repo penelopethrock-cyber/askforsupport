@@ -6,24 +6,24 @@
 // =============================================================
 
 // Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-// —— Colour Palette ———————————————————————————————————————————
+// ——  Colour Palette ——————————————————————————————————————————————————————————————————
 $blush-pink:    #C8603A;
-$lavender:      #8B4A3A;
-$soft-mint:     #D4A96A;
+$lavender:       #8B4A3A;
+$soft-mint:      #D4A96A;
 $buttery-yellow:#E8A830;
 $soft-peach:    #E87D45;
 $accent-pink:   #D4531A;
 $dark-text:     #3D2B1A;
-$white:         #FDF5EC;
+$white:          #FDF5EC;
 $card-shadow:   rgba(61, 43, 26, 0.12);
 
-// —— Base ————————————————————————————————————————————————————
+// —— Base ——————————————————————————————————————————————————————————————————————————————
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Averia Libre', cursive;
   color: $dark-text;
   background: $white;
   min-height: 100vh;
@@ -31,9 +31,9 @@ body {
   font-size: 1rem;
 }
 
-// —— Typography ————————————————————————————————————————————
+// —— Typography ————————————————————————————————————————————————————————————————————————
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Averia Libre', cursive;
   color: $dark-text;
   line-height: 1.25;
 }
@@ -63,7 +63,7 @@ p {
   margin-bottom: 1rem;
 }
 
-// —— Links —————————————————————————————————————————————————
+// —— Links ——————————————————————————————————————————————————————————————————————————————
 a {
   color: $accent-pink;
   font-weight: 600;
@@ -94,14 +94,14 @@ a {
   }
 }
 
-// —— Layout Container —————————————————————————————————————
+// —— Layout Container ——————————————————————————————————————————————————————————————————
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-// —— Site Header —————————————————————————————————————————
+// —— Site Header ————————————————————————————————————————————————————————————————————————
 .site-header {
   background: rgba($white, 0.72);
   backdrop-filter: blur(10px);
@@ -128,13 +128,13 @@ a {
   }
 }
 
-// —— Main Content ————————————————————————————————————————
+// —— Main Content ————————————————————————————————————————————————————————————————————————
 main.container {
   padding-top: 2.5rem;
   padding-bottom: 3rem;
 }
 
-// —— Cards —————————————————————————————————————————————
+// —— Cards ————————————————————————————————————————————————————————————————————————————————
 .card {
   background: rgba($white, 0.85);
   border-radius: 1.25rem;
@@ -152,10 +152,10 @@ main.container {
   }
 }
 
-// —— Buttons —————————————————————————————————————————————
+// —— Buttons ————————————————————————————————————————————————————————————————————————————
 .btn, button, input[type="submit"], input[type="button"] {
   display: inline-block;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Averia Libre', cursive;
   font-weight: 700;
   font-size: 0.95rem;
   padding: 0.55rem 1.4rem;
@@ -179,7 +179,7 @@ main.container {
   &::after { display: none; }
 }
 
-// —— Cute List (heart bullets) ————————————————————————————
+// —— Cute List (heart bullets) ————————————————————————————————————————————————————————————
 .cute-list {
   list-style: none;
   padding-left: 0;
@@ -199,7 +199,7 @@ main.container {
   }
 }
 
-// —— Blockquote / Callout ————————————————————————————————
+// —— Blockquote / Callout ————————————————————————————————————————————————————————————————
 blockquote {
   background: $lavender;
   border-left: 4px solid $accent-pink;
@@ -221,7 +221,7 @@ blockquote {
   &--peach   { background: $soft-peach;    border-color: darken($soft-peach, 15%); }
 }
 
-// —— Resource Grid / Category Cards ——————————————————————
+// —— Resource Grid / Category Cards ————————————————————————————————————————————————————
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -255,7 +255,7 @@ blockquote {
   }
 }
 
-// —— Category Section Hero ————————————————————————————————
+// —— Category Section Hero ————————————————————————————————————————————————————————————————
 .category-hero {
   background: rgba($white, 0.7);
   border-radius: 1.5rem;
@@ -272,7 +272,7 @@ blockquote {
   p { font-size: 1.05rem; max-width: 640px; margin: 0.75rem auto 0; }
 }
 
-// —— Footer ——————————————————————————————————————————————
+// —— Footer ————————————————————————————————————————————————————————————————————————————————
 .site-footer {
   background: rgba($white, 0.6);
   border-top: 2px solid $blush-pink;
@@ -283,7 +283,7 @@ blockquote {
   margin-top: 3rem;
 }
 
-// —— Responsive ——————————————————————————————————————————
+// —— Responsive ————————————————————————————————————————————————————————————————————————————
 @media (max-width: 640px) {
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.4rem; }
@@ -298,7 +298,7 @@ blockquote {
   .category-hero { padding: 1.25rem 1rem; }
 }
 
-// —— Badge Tray ——————————————————————————————————————————
+// —— Badge Tray ————————————————————————————————————————————————————————————————————————————
 .badge-tray {
   position: fixed;
   bottom: 16px;
@@ -318,7 +318,7 @@ blockquote {
 .copyright-badge {
   display: inline-flex;
   align-items: center;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Averia Libre', cursive;
   font-size: 0.7rem;
   font-weight: 600;
   color: $dark-text;
@@ -343,7 +343,7 @@ blockquote {
   }
 }
 
-// —— Homepage Blurb Box — clean pane, no border ——————————————
+// —— Homepage Blurb Box — clean pane, no border ——————————————————————————————————————
 .blurb-box {
   background: linear-gradient(135deg, $white 0%, $soft-mint 100%);
   border-radius: 24px;
@@ -376,13 +376,13 @@ blockquote {
   }
 }
 
-// —— Subcategory Heading (Social Health grouped sections) ————————————————
+// —— Subcategory Heading (Social Health grouped sections) ————————————————————————————
 // Used as h2 section dividers inside category pages that group resources by
-// subcategory. Matches the site's h2 type scale ($dark-text, Baloo 2 700)
+// subcategory. Matches the site's h2 type scale ($dark-text, Averia Libre 700)
 // but suppresses the global h2 star decorators so they read as clean section
 // headers rather than page titles.
 .subcategory-heading {
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Averia Libre', cursive;
   font-size: 1.75rem;
   font-weight: 700;
   color: $dark-text;
@@ -395,11 +395,11 @@ blockquote {
   &::after  { content: none; }
 }
 
-// ════════════════════════════════════════════════════
+// ╔══════════════════════════════════════════════════════════════════════════════╗
 // Navigation (.main-nav)
 // Styles the header nav: horizontal bar on desktop,
 // collapsible hamburger on mobile.
-// ════════════════════════════════════════════════════
+// ╚══════════════════════════════════════════════════════════════════════════════╝
 
 .main-nav {
   display: flex;
@@ -418,7 +418,7 @@ blockquote {
 
   li a {
     display: inline-block;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Averia Libre', cursive;
     font-weight: 700;
     font-size: 0.92rem;
     color: $dark-text;
@@ -534,7 +534,7 @@ blockquote {
   }
 }
 
-// ── Canvas Background ────────────────────────────────────────────────────
+// ── Canvas Background ──────────────────────────────────────────────────────────────────────────────────────
 // Full-screen falling-leaves canvas rendered behind all page content.
 #bg-canvas {
   position: fixed;
