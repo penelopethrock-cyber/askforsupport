@@ -2,13 +2,13 @@
 ---
 
 // ============================================================
-// Warm Autumnal Theme Ã¢ÂÂ askfor.support
+// Warm Autumnal Theme — askfor.support
 // =============================================================
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;500;600;700&display=swap');
 
-// Ã¢ÂÂÃ¢ÂÂ Colour Palette Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Colour Palette ———————————————————————————————————————————
 $blush-pink:    #C8603A;
 $lavender:      #8B4A3A;
 $soft-mint:     #D4A96A;
@@ -19,22 +19,19 @@ $dark-text:     #3D2B1A;
 $white:         #FDF5EC;
 $card-shadow:   rgba(61, 43, 26, 0.12);
 
-// Ã¢ÂÂÃ¢ÂÂ Base Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Base ————————————————————————————————————————————————————
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: 'Nunito', sans-serif;
   color: $dark-text;
-  background-image: url('/assets/images/background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: $white;
   min-height: 100vh;
   line-height: 1.7;
   font-size: 1rem;
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Typography Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Typography ————————————————————————————————————————————
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Baloo 2', cursive;
   color: $dark-text;
@@ -44,16 +41,16 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.4rem;
   font-weight: 800;
-  &::before { content: 'Ã¢ÂÂ¥ '; }
-  &::after  { content: ' Ã¢ÂÂ¥'; }
+  &::before { content: '♥ '; }
+  &::after  { content: ' ♥'; }
 }
 
 h2 {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  &::before { content: 'Ã¢ÂÂ '; color: $accent-pink; }
-  &::after  { content: ' Ã¢ÂÂ'; color: $accent-pink; }
+  &::before { content: '✦ '; color: $accent-pink; }
+  &::after  { content: ' ✦'; color: $accent-pink; }
 }
 
 h3 {
@@ -66,7 +63,7 @@ p {
   margin-bottom: 1rem;
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Links Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Links —————————————————————————————————————————————————
 a {
   color: $accent-pink;
   font-weight: 600;
@@ -97,14 +94,14 @@ a {
   }
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Layout Container Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Layout Container —————————————————————————————————————
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Site Header Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Site Header —————————————————————————————————————————
 .site-header {
   background: rgba($white, 0.72);
   backdrop-filter: blur(10px);
@@ -131,13 +128,13 @@ a {
   }
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Main Content Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Main Content ————————————————————————————————————————
 main.container {
   padding-top: 2.5rem;
   padding-bottom: 3rem;
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Cards Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Cards —————————————————————————————————————————————
 .card {
   background: rgba($white, 0.85);
   border-radius: 1.25rem;
@@ -146,6 +143,8 @@ main.container {
   border: 1.5px solid rgba($blush-pink, 0.6);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
 
   &:hover {
     transform: translateY(-3px);
@@ -153,7 +152,7 @@ main.container {
   }
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Buttons Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Buttons —————————————————————————————————————————————
 .btn, button, input[type="submit"], input[type="button"] {
   display: inline-block;
   font-family: 'Nunito', sans-serif;
@@ -180,7 +179,7 @@ main.container {
   &::after { display: none; }
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Cute List (heart bullets) Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Cute List (heart bullets) ————————————————————————————
 .cute-list {
   list-style: none;
   padding-left: 0;
@@ -190,7 +189,7 @@ main.container {
     position: relative;
 
     &::before {
-      content: 'Ã¢ÂÂ¥';
+      content: '♥';
       position: absolute;
       left: 0;
       color: $accent-pink;
@@ -200,7 +199,7 @@ main.container {
   }
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Blockquote / Callout Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Blockquote / Callout ————————————————————————————————
 blockquote {
   background: $lavender;
   border-left: 4px solid $accent-pink;
@@ -222,7 +221,7 @@ blockquote {
   &--peach   { background: $soft-peach;    border-color: darken($soft-peach, 15%); }
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Resource Grid / Category Cards Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Resource Grid / Category Cards ——————————————————————
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -256,7 +255,7 @@ blockquote {
   }
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Category Section Hero Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Category Section Hero ————————————————————————————————
 .category-hero {
   background: rgba($white, 0.7);
   border-radius: 1.5rem;
@@ -273,7 +272,7 @@ blockquote {
   p { font-size: 1.05rem; max-width: 640px; margin: 0.75rem auto 0; }
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Footer Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Footer ——————————————————————————————————————————————
 .site-footer {
   background: rgba($white, 0.6);
   border-top: 2px solid $blush-pink;
@@ -284,7 +283,7 @@ blockquote {
   margin-top: 3rem;
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Responsive Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Responsive ——————————————————————————————————————————
 @media (max-width: 640px) {
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.4rem; }
@@ -299,7 +298,7 @@ blockquote {
   .category-hero { padding: 1.25rem 1rem; }
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Badge Tray Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Badge Tray ——————————————————————————————————————————
 .badge-tray {
   position: fixed;
   bottom: 16px;
@@ -351,7 +350,7 @@ blockquote {
 
 .blurb-box {
   // Gradient background â no filter/backdrop-filter on this element
-  background: linear-gradient(90deg, var(--header-bg) 0%, #D8C8F0 100%);
+  background: linear-gradient(135deg, $white 0%, $soft-mint 100%);
   border-radius: 24px;
   padding: 36px 32px;
   margin-bottom: 40px;
@@ -375,7 +374,7 @@ blockquote {
     pointer-events: none;
     z-index: 0;
     // Inline SVG: dashed rounded-rect path warped by feTurbulence displacement
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='crayon' x='-4%25' y='-15%25' width='108%25' height='130%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.025 0.04' numOctaves='3' seed='2' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='2.2' xChannelSelector='R' yChannelSelector='G'/%3E%3C/filter%3E%3C/defs%3E%3Crect x='4' y='4' width='992' height='192' rx='22' ry='22' fill='none' stroke='%23E07898' stroke-width='4' stroke-dasharray='28%2C14' filter='url(%23crayon)'/%3E%3Crect x='4' y='4' width='992' height='192' rx='22' ry='22' fill='none' stroke='%23F0B0C0' stroke-width='2' stroke-dasharray='28%2C14' stroke-dashoffset='8' opacity='0.55' filter='url(%23crayon)'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='crayon' x='-4%25' y='-15%25' width='108%25' height='130%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.025 0.04' numOctaves='3' seed='2' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='2.2' xChannelSelector='R' yChannelSelector='G'/%3E%3C/filter%3E%3C/defs%3E%3Crect x='4' y='4' width='992' height='192' rx='22' ry='22' fill='none' stroke='%23C8603A' stroke-width='4' stroke-dasharray='28%2C14' filter='url(%23crayon)'/%3E%3Crect x='4' y='4' width='992' height='192' rx='22' ry='22' fill='none' stroke='%23D4A96A' stroke-width='2' stroke-dasharray='28%2C14' stroke-dashoffset='8' opacity='0.55' filter='url(%23crayon)'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
@@ -388,13 +387,13 @@ blockquote {
 
   // Override the generic section-heading star decorators
   .section-heading {
-    color: #C2185B;
-    &::before { content: 'ð¸ '; }
-    &::after  { content: ' ð¸'; }
+    color: $blush-pink;
+    &::before { content: '🍂 '; }
+    &::after  { content: ' 🍂'; }
   }
 
   .section-intro {
-    color: #7B3B6E;
+    color: $lavender;
     font-size: 1.02rem;
     line-height: 1.75;
     max-width: 700px;
@@ -402,7 +401,7 @@ blockquote {
   }
 }
 
-// Ã¢ÂÂÃ¢ÂÂ Subcategory Heading (Social Health grouped sections) Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// —— Subcategory Heading (Social Health grouped sections) ————————————————
 // Used as h2 section dividers inside category pages that group resources by
 // subcategory. Matches the site's h2 type scale ($dark-text, Baloo 2 700)
 // but suppresses the global h2 star decorators so they read as clean section
