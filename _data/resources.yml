@@ -1,1 +1,99 @@
-YML_PLACEHOLDER
+healthcare:
+  - name: NYC Care
+    type: "City Program"
+    description: "Low-cost/no-cost health services for New Yorkers without health insurance, via NYC Health + Hospitals. Choose your own doctor regardless of immigration status or ability to pay."
+    address: "Citywide, via NYC Health + Hospitals"
+    phone: "1-646-692-2273"
+    link: "https://nyccare.nyc"
+  - name: Callen-Lorde Community Health Center
+    type: "LGBTQ+ Health"
+    description: "Providing high-quality healthcare to LGBTQ+ communities in NYC, regardless of ability to pay."
+    address: "Manhattan, Brooklyn, & Bronx"
+    link: "https://callen-lorde.org"
+  - name: Planned Parenthood of Greater NY
+    type: "Reproductive Health"
+    description: "Sexual and reproductive healthcare including birth control, STI testing, and screenings."
+    address: "Various NYC Locations"
+    link: "https://www.plannedparenthood.org/planned-parenthood-greater-new-york"
+  - name: NYC Well
+    type: "Mental Health"
+    description: "Free, confidential mental health support via phone, text, or chat. Available 24/7/365 in 200+ languages."
+    phone: "1-888-692-9355"
+    link: "https://nycwell.cityofnewyork.us"
+
+education:
+  - name: Brooklyn College Adult Literacy Program (BCALP)
+    type: "Adult Literacy"
+    description: "Free GED/HSE prep and ESOL classes for NY residents 18+, with case management support."
+    address: "Brooklyn College, Brooklyn, NY"
+    link: "https://brooklyn.edu/literacy"
+  - name: CCNY Free GED Preparation Program
+    type: "GED Preparation"
+    description: "Free GED/HSE prep classes for NY residents 19+, offered through the City College of New York."
+    address: "160 Convent Avenue, New York, NY 10031"
+    link: "https://www.ccny.cuny.edu/cps/ged-prep"
+  - name: NYPL Adult Learning Centers
+    type: "Multiple Services"
+    description: "Free ESOL, adult literacy, and GED/HSE prep classes across library branches in Manhattan, Bronx, and Staten Island."
+    link: "https://www.nypl.org/help/attendance-requirements/adult-learning"
+  - name: Brooklyn Public Library Adult Learning
+    type: "Multiple Services"
+    description: "Free literacy, ESOL, and HSE prep classes for adults 17+ in Brooklyn."
+    link: "https://www.bklynlibrary.org/adult-learning"
+  - name: Brooklyn Educational Opportunity Center (BEOC)
+    type: "Career Training"
+    description: "Free vocational training (medical, office, security), GED/HSE prep, and college prep for eligible adults."
+    address: "111 Livingston Street, Brooklyn, NY 11201"
+    link: "https://www.sunybeoÑ.org"
+  - name: WE NYC (Women Entrepreneurs NYC)
+    type: "Entrepreneurship"
+    description: "Free business training, mentorship, and networking for women entrepreneurs in NYC."
+    link: "https://we.nyc"
+
+housing:
+  - name: NYC Housing Connect
+    type: "City Program"
+    description: "NYC's official portal for applying to affordable housing lotteries across the five boroughs, run by HPD. Create a profile once and apply to multiple listings as they open."
+    link: "https://www.nyc.gov/site/hpd/services-and-information/housing-connect.page"
+  - name: "Met Council on Housing â Tenants' Rights Hotline"
+    type: "Tenant Advocacy"
+    description: "Free tenant advocacy hotline open to any tenant living in NYC. Volunteer-staffed, answers questions on repairs, harassment, rent stabilization, evictions, and connects tenants to organizing support and legal referrals."
+    phone: "212-979-0611"
+    link: "https://www.metcouncilonhousing.org"
+  - name: NYC Tenant Helpline (via 311)
+    type: "City Program"
+    description: "A one-stop city service to inform NYC tenants about their rights and connect them to housing-related resources, including free legal services. Reach it through 311."
+    phone: "311"
+  - name: HRA Homebase
+    type: "Homelessness Prevention"
+    description: "NYC's homelessness prevention program, offering case management, help resolving rent arrears, mediation with landlords, and connections to emergency financial assistance to help households stay housed or find new housing before entering shelter."
+    phone: "212-361-8000"
+    link: "https://www.nyc.gov/site/hra/help/homebase.page"
+  - name: Disability Rent Increase Exemption (DRIE)
+    type: "Disability Housing Benefit"
+    description: "A NYC program that freezes the rent for eligible low-income tenants with disabilities in rent-regulated apartments, exempting them from future rent increases. The landlord receives a property tax credit to offset the frozen rent."
+    link: "https://www.nyc.gov/site/rentfreeze/index.page"
+  - name: Section 811 Supportive Housing for Persons with Disabilities
+    type: "Federal Program"
+    description: "A federal HUD program providing project-based rental assistance so very low-income adults with disabilities can live independently in the community, often paired with voluntary supportive services."
+    link: "https://www.hud.gov/program_offices/comm_planning/section811"
+
+opwdd:
+  - name: Care Design NY
+    type: "Care Coordination Organization"
+    description: "Provides comprehensive Health Home care management and Medicaid Service Coordination for people with I/DD enrolled in OPWDD services across New York, including all 5 NYC boroughs."
+    phone: "518-235-1888"
+    link: "https://caredesignny.org"
+  - name: Tri-County Care
+    type: "Care Coordination Organization"
+    description: "A New York CCO providing Health Home care management and Medicaid Service Coordination for people with I/DD enrolled in OPWDD services, with offices in Brooklyn, Long Island City, and other locations."
+    phone: "844-504-8400"
+    link: "https://tricountycare.org"
+  - name: "Advance Care Alliance (ACA/NY)"
+    type: "Care Coordination Organization"
+    description: "A CCO that offers care coordination services for people with I/DD and their families in NYC, Long Island, and the Lower Hudson Valley."
+    address: "25 Hyatt Street, Staten Island, NY 10301 (multiple NYC offices)"
+    phone: "833-692-2269"
+    link: "https://acany.org"
+
+social_health: []
