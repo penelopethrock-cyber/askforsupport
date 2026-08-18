@@ -44,7 +44,7 @@ education:
     type: "Career Training"
     description: "Free vocational training (medical, office, security), GED/HSE prep, and college prep for eligible adults."
     address: "111 Livingston Street, Brooklyn, NY 11201"
-    link: "https://www.sunybeoÑ.org"
+    link: "https://www.sunybeo.org"
   - name: WE NYC (Women Entrepreneurs NYC)
     type: "Entrepreneurship"
     description: "Free business training, mentorship, and networking for women entrepreneurs in NYC."
@@ -55,7 +55,7 @@ housing:
     type: "City Program"
     description: "NYC's official portal for applying to affordable housing lotteries across the five boroughs, run by HPD. Create a profile once and apply to multiple listings as they open."
     link: "https://www.nyc.gov/site/hpd/services-and-information/housing-connect.page"
-  - name: "Met Council on Housing â Tenants' Rights Hotline"
+  - name: "Met Council on Housing – Tenants' Rights Hotline"
     type: "Tenant Advocacy"
     description: "Free tenant advocacy hotline open to any tenant living in NYC. Volunteer-staffed, answers questions on repairs, harassment, rent stabilization, evictions, and connects tenants to organizing support and legal referrals."
     phone: "212-979-0611"
