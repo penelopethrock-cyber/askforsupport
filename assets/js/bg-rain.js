@@ -1,6 +1,6 @@
-// bg-rain.js — Autumn Leaves Canvas Animation (Oak, Maple, Catalpa)
+// bg-rain.js — Autumn Leaves Static Canvas Background (Oak, Maple, Catalpa)
 // Targets: <canvas id="bg-canvas">
-// Respects prefers-reduced-motion; pauses when tab is hidden
+// Static scatter: draws once on load and on resize; no animation loop.
 
 (function () {
   'use strict';
@@ -15,49 +15,8 @@
 
   const LEAF_TYPES = ['oak', 'maple', 'catalpa'];
 
-  const LEAF_COUNT_MIN = 34;
-  const LEAF_COUNT_MAX = 46;
-  const FALL_DURATION_MIN = 15000;
-  const FALL_DURATION_MAX = 20000;
-
-  let leaves = [];
-  let animationId = null;
-  let paused = false;
-  let lastTime = null;
-
-  // Wind drift state: a slowly-oscillating bias that gives the sway a wind-like feel
-  let windDrift = 0;
-  let windCycleTime = 0;
-
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function resize() {
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-
   function randomBetween(a, b) {
     return a + Math.random() * (b - a);
-  }
-
-  function makeLeaf() {
-    const fallDuration = randomBetween(FALL_DURATION_MIN, FALL_DURATION_MAX);
-    const xBase = randomBetween(0, canvas.width);
-    return {
-      xBase,
-      x: xBase,
-      y:            randomBetween(-100, -10),
-      size:         randomBetween(10, 20),
-      type:         LEAF_TYPES[Math.floor(Math.random() * LEAF_TYPES.length)],
-      color:        LEAF_COLORS[Math.floor(Math.random() * LEAF_COLORS.length)],
-      swayAmplitude: randomBetween(30, 80),
-      swayFrequency: randomBetween(0.5, 1.5),
-      swayPhase:    randomBetween(0, Math.PI * 2),
-      rotation:     randomBetween(0, Math.PI * 2),
-      rotationSpeed: randomBetween(-0.5, 0.5),
-      speed:        canvas.height / fallDuration * 1000,
-      elapsed:      0,
-    };
   }
 
   function darkenColor(hex, amount) {
@@ -191,106 +150,39 @@
     ctx.stroke();
   }
 
-  function drawLeaf(leaf) {
-    ctx.save();
-    ctx.translate(leaf.x, leaf.y);
-    ctx.rotate(leaf.rotation);
-    ctx.fillStyle = leaf.color;
-    ctx.strokeStyle = leaf.color;
-    ctx.lineWidth = leaf.size * 0.08;
-    const s = leaf.size;
-    if (leaf.type === 'oak') drawOakLeaf(ctx, s, leaf.color);
-    else if (leaf.type === 'maple') drawMapleLeaf(ctx, s, leaf.color);
-    else drawCatalpamLeaf(ctx, s, leaf.color);
-    ctx.restore();
-  }
-
-  function initLeaves() {
-    const count = Math.floor(randomBetween(LEAF_COUNT_MIN, LEAF_COUNT_MAX + 1));
-    leaves = [];
-    for (let i = 0; i < count; i++) {
-      const leaf = makeLeaf();
-      leaf.y = randomBetween(-canvas.height, canvas.height * 0.9);
-      leaves.push(leaf);
-    }
-  }
-
-  function update(dt) {
-    const dtSec = dt / 1000;
-
-    windCycleTime += dt;
-    const windPeriod = 11000;
-    const windDriftVel = Math.sin(windCycleTime / windPeriod * Math.PI * 2) * 0.0008;
-    windDrift += windDriftVel * dt;
-
-    for (let i = 0; i < leaves.length; i++) {
-      const leaf = leaves[i];
-      leaf.elapsed += dt;
-      leaf.y += leaf.speed * dtSec;
-
-      const phase = leaf.swayPhase + leaf.elapsed / 1000 * leaf.swayFrequency * Math.PI * 2 + windDrift;
-      leaf.x = leaf.xBase + Math.sin(phase) * leaf.swayAmplitude;
-
-      leaf.rotation += leaf.rotationSpeed * dtSec;
-      if (leaf.y > canvas.height + 40) {
-        leaves[i] = makeLeaf();
-      }
-    }
-  }
-
-  function render() {
+  function drawScene() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (const leaf of leaves) {
-      drawLeaf(leaf);
+
+    const count = Math.floor(randomBetween(60, 91));
+
+    for (let i = 0; i < count; i++) {
+      const x       = randomBetween(0, canvas.width);
+      const y       = randomBetween(0, canvas.height);
+      const size    = randomBetween(18, 48);
+      const rotation = randomBetween(0, Math.PI * 2);
+      const type    = LEAF_TYPES[Math.floor(Math.random() * LEAF_TYPES.length)];
+      const color   = LEAF_COLORS[Math.floor(Math.random() * LEAF_COLORS.length)];
+      const opacity = randomBetween(0.5, 0.9);
+
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(rotation);
+      ctx.globalAlpha = opacity;
+      ctx.fillStyle   = color;
+      ctx.strokeStyle = color;
+      ctx.lineWidth   = size * 0.08;
+
+      if (type === 'oak')        drawOakLeaf(ctx, size, color);
+      else if (type === 'maple') drawMapleLeaf(ctx, size, color);
+      else                       drawCatalpamLeaf(ctx, size, color);
+
+      ctx.restore();
     }
   }
 
-  function loop(timestamp) {
-    if (paused) return;
-    if (lastTime === null) lastTime = timestamp;
-    const dt = Math.min(timestamp - lastTime, 100);
-    lastTime = timestamp;
-    update(dt);
-    render();
-    animationId = requestAnimationFrame(loop);
-  }
-
-  function start() {
-    if (animationId !== null) return;
-    lastTime = null;
-    animationId = requestAnimationFrame(loop);
-  }
-
-  function stop() {
-    if (animationId !== null) {
-      cancelAnimationFrame(animationId);
-      animationId = null;
-    }
-  }
-
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
-      paused = true;
-      stop();
-    } else {
-      paused = false;
-      start();
-    }
-  });
-
-  window.addEventListener('resize', function () {
-    resize();
-    initLeaves();
-  });
-
-  resize();
-
-  if (prefersReduced) {
-    initLeaves();
-    render();
-  } else {
-    initLeaves();
-    start();
-  }
+  window.addEventListener('resize', drawScene);
+  drawScene();
 
 })();
