@@ -420,3 +420,142 @@ blockquote {
   &::before { content: none; }
   &::after  { content: none; }
 }
+
+// ════════════════════════════════════════════════════
+// Navigation (.main-nav)
+// Styles the header nav: horizontal bar on desktop,
+// collapsible hamburger on mobile.
+// ════════════════════════════════════════════════════
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  // Desktop nav list
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.25rem;
+  }
+
+  li a {
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: $dark-text;
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+
+    &::after { display: none; }
+
+    &:hover {
+      background: rgba($blush-pink, 0.18);
+      color: $accent-pink;
+    }
+
+    &.active,
+    &[aria-current="page"] {
+      background: $accent-pink;
+      color: $white;
+
+      &:hover {
+        background: darken($accent-pink, 10%);
+        color: $white;
+      }
+    }
+  }
+
+  // Hamburger toggle (mobile only - hidden on desktop)
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: rgba($blush-pink, 0.15);
+    border: 1.5px solid rgba($blush-pink, 0.5);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: rgba($blush-pink, 0.3);
+    }
+
+    .nav-toggle-bar {
+      display: block;
+      width: 20px;
+      height: 2.5px;
+      background: $dark-text;
+      border-radius: 2px;
+      transition: transform 0.22s ease, opacity 0.22s ease;
+    }
+
+    &[aria-expanded="true"] {
+      background: rgba($accent-pink, 0.15);
+      border-color: $accent-pink;
+
+      .nav-toggle-bar:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+      }
+      .nav-toggle-bar:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      .nav-toggle-bar:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+// Mobile nav breakpoint
+@media (max-width: 640px) {
+  .main-nav {
+    position: relative;
+    width: 100%;
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    ul {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.1rem;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      min-width: 200px;
+      background: rgba($white, 0.97);
+      border: 1.5px solid rgba($blush-pink, 0.5);
+      border-radius: 12px;
+      padding: 0.5rem;
+      box-shadow: 0 8px 24px $card-shadow;
+      z-index: 200;
+
+      &.is-open {
+        display: flex;
+      }
+    }
+
+    li a {
+      width: 100%;
+      padding: 0.55rem 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+  }
+}
