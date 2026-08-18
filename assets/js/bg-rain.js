@@ -1,4 +1,4 @@
-// bg-rain.js — Autumn Leaves Canvas Animation
+// bg-rain.js — Autumn Leaves Canvas Animation (Oak, Maple, Catalpa)
 // Targets: <canvas id="bg-canvas">
 // Respects prefers-reduced-motion; pauses when tab is hidden
 
@@ -9,27 +9,22 @@
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  // Leaf colour palette — autumnal
   const LEAF_COLORS = [
-    '#C8603A', // burnt orange
-    '#E8A830', // golden yellow
-    '#8B4A3A', // rust brown
-    '#A0281A', // deep red
-    '#D4531A', // sienna
-    '#E87D45', // warm amber
+    '#C8603A', '#E8A830', '#8B4A3A', '#A0281A', '#D4531A', '#E87D45',
   ];
 
-  const LEAF_COUNT_MIN = 18;
-  const LEAF_COUNT_MAX = 25;
-  const FALL_DURATION_MIN = 15000; // ms
-  const FALL_DURATION_MAX = 20000; // ms
+  const LEAF_TYPES = ['oak', 'maple', 'catalpa'];
+
+  const LEAF_COUNT_MIN = 34;
+  const LEAF_COUNT_MAX = 46;
+  const FALL_DURATION_MIN = 15000;
+  const FALL_DURATION_MAX = 20000;
 
   let leaves = [];
   let animationId = null;
   let paused = false;
   let lastTime = null;
 
-  // Check reduced-motion preference
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function resize() {
@@ -47,18 +42,85 @@
       x:          randomBetween(0, canvas.width),
       y:          randomBetween(-100, -10),
       size:       randomBetween(10, 20),
+      type:       LEAF_TYPES[Math.floor(Math.random() * LEAF_TYPES.length)],
       color:      LEAF_COLORS[Math.floor(Math.random() * LEAF_COLORS.length)],
-      // sway: horizontal oscillation
       swayAmplitude: randomBetween(30, 80),
-      swayFrequency: randomBetween(0.5, 1.5),  // cycles per second
+      swayFrequency: randomBetween(0.5, 1.5),
       swayPhase:  randomBetween(0, Math.PI * 2),
-      // rotation
       rotation:      randomBetween(0, Math.PI * 2),
-      rotationSpeed: randomBetween(-0.5, 0.5), // radians per second
-      // fall speed derived from duration
-      speed:       canvas.height / fallDuration * 1000, // px per second
+      rotationSpeed: randomBetween(-0.5, 0.5),
+      speed:       canvas.height / fallDuration * 1000,
       elapsed:     0,
     };
+  }
+
+  // Oak leaf: rounded lobed shape built from a wavy path of bumps
+  function drawOakLeaf(ctx, s) {
+    ctx.beginPath();
+    const lobes = 4;
+    const halfLen = s * 0.9;
+    ctx.moveTo(0, -halfLen);
+    for (let i = 0; i < lobes; i++) {
+      const yTop = -halfLen + (halfLen * 2 / lobes) * i;
+      const yBot = -halfLen + (halfLen * 2 / lobes) * (i + 1);
+      const yMid = (yTop + yBot) / 2;
+      const outward = s * (0.55 - i * 0.05);
+      ctx.quadraticCurveTo(outward, yMid, 0, yBot);
+    }
+    for (let i = lobes - 1; i >= 0; i--) {
+      const yBot = -halfLen + (halfLen * 2 / lobes) * (i + 1);
+      const yTop = -halfLen + (halfLen * 2 / lobes) * i;
+      const yMid = (yTop + yBot) / 2;
+      const outward = -s * (0.55 - i * 0.05);
+      ctx.quadraticCurveTo(outward, yMid, 0, yTop);
+    }
+    ctx.closePath();
+    ctx.fill();
+    // stem
+    ctx.beginPath();
+    ctx.moveTo(0, halfLen);
+    ctx.lineTo(0, halfLen + s * 0.3);
+    ctx.stroke();
+  }
+
+  // Maple leaf: classic pointed 5-lobe star shape
+  function drawMapleLeaf(ctx, s) {
+    const points = 5;
+    const outerR = s * 0.95;
+    const innerR = s * 0.4;
+    ctx.beginPath();
+    for (let i = 0; i < points * 2; i++) {
+      const angle = (Math.PI / points) * i - Math.PI / 2;
+      const r = i % 2 === 0 ? outerR : innerR;
+      const px = Math.cos(angle) * r;
+      const py = Math.sin(angle) * r;
+      if (i === 0) ctx.moveTo(px, py);
+      else ctx.lineTo(px, py);
+    }
+    ctx.closePath();
+    ctx.fill();
+    // stem
+    ctx.beginPath();
+    ctx.moveTo(0, outerR * 0.3);
+    ctx.lineTo(0, outerR + s * 0.35);
+    ctx.stroke();
+  }
+
+  // Catalpa leaf: large simple heart/oval shape with a pointed tip
+  function drawCatalpaLeaf(ctx, s) {
+    const w = s * 0.85;
+    const h = s * 1.05;
+    ctx.beginPath();
+    ctx.moveTo(0, -h);
+    ctx.bezierCurveTo(w, -h * 0.6, w * 0.95, h * 0.5, 0, h);
+    ctx.bezierCurveTo(-w * 0.95, h * 0.5, -w, -h * 0.6, 0, -h);
+    ctx.closePath();
+    ctx.fill();
+    // stem
+    ctx.beginPath();
+    ctx.moveTo(0, h);
+    ctx.lineTo(0, h + s * 0.3);
+    ctx.stroke();
   }
 
   function drawLeaf(leaf) {
@@ -66,27 +128,12 @@
     ctx.translate(leaf.x, leaf.y);
     ctx.rotate(leaf.rotation);
     ctx.fillStyle = leaf.color;
-    const s = leaf.size;
-    // Simple maple-leaf-like shape: two overlapping ellipses + stem
-    ctx.beginPath();
-    // Left lobe
-    ctx.ellipse(-s * 0.35, -s * 0.1, s * 0.45, s * 0.3, -0.5, 0, Math.PI * 2);
-    ctx.fill();
-    // Right lobe
-    ctx.beginPath();
-    ctx.ellipse(s * 0.35, -s * 0.1, s * 0.45, s * 0.3, 0.5, 0, Math.PI * 2);
-    ctx.fill();
-    // Centre body
-    ctx.beginPath();
-    ctx.ellipse(0, 0, s * 0.3, s * 0.45, 0, 0, Math.PI * 2);
-    ctx.fill();
-    // Stem
     ctx.strokeStyle = leaf.color;
-    ctx.lineWidth = s * 0.08;
-    ctx.beginPath();
-    ctx.moveTo(0, s * 0.45);
-    ctx.lineTo(0, s * 0.75);
-    ctx.stroke();
+    ctx.lineWidth = leaf.size * 0.08;
+    const s = leaf.size;
+    if (leaf.type === 'oak') drawOakLeaf(ctx, s);
+    else if (leaf.type === 'maple') drawMapleLeaf(ctx, s);
+    else drawCatalpaLeaf(ctx, s);
     ctx.restore();
   }
 
@@ -95,27 +142,21 @@
     leaves = [];
     for (let i = 0; i < count; i++) {
       const leaf = makeLeaf();
-      // Spread them vertically so they don't all start at once
       leaf.y = randomBetween(-canvas.height, canvas.height * 0.9);
       leaves.push(leaf);
     }
   }
 
   function update(dt) {
-    // dt = elapsed ms since last frame
     const dtSec = dt / 1000;
     for (let i = 0; i < leaves.length; i++) {
       const leaf = leaves[i];
       leaf.elapsed += dt;
-      // Fall downward
       leaf.y += leaf.speed * dtSec;
-      // Side-to-side sway (sinusoidal)
       leaf.x += Math.sin(
         leaf.swayPhase + leaf.elapsed / 1000 * leaf.swayFrequency * Math.PI * 2
       ) * leaf.swayAmplitude * dtSec * 0.5;
-      // Rotate slowly
       leaf.rotation += leaf.rotationSpeed * dtSec;
-      // Recycle leaf when it goes below the screen
       if (leaf.y > canvas.height + 40) {
         leaves[i] = makeLeaf();
       }
@@ -132,7 +173,7 @@
   function loop(timestamp) {
     if (paused) return;
     if (lastTime === null) lastTime = timestamp;
-    const dt = Math.min(timestamp - lastTime, 100); // cap at 100ms to avoid jumps
+    const dt = Math.min(timestamp - lastTime, 100);
     lastTime = timestamp;
     update(dt);
     render();
@@ -152,7 +193,6 @@
     }
   }
 
-  // Visibility API — pause when tab is hidden
   document.addEventListener('visibilitychange', function () {
     if (document.hidden) {
       paused = true;
@@ -163,18 +203,14 @@
     }
   });
 
-  // Resize handler
   window.addEventListener('resize', function () {
     resize();
-    // Re-initialise so leaves don't pile up in one corner
     initLeaves();
   });
 
-  // Bootstrap
   resize();
 
   if (prefersReduced) {
-    // Draw one static frame and stop
     initLeaves();
     render();
   } else {
